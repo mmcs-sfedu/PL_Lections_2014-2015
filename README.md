@@ -39,20 +39,20 @@
 
 
 4. [Лекция 4](/lecture_04.md#%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-4)
-  * Препроцессор
-    * Основные директивы препроцессора
-  * Условная компиляция
-  * Стражи включения (include guards)
-  * Precompiled headers
-  * Перечисления
-    * Перечисления в C++98
-    * Перечисления в C++11
-    * Использование перечислений
-  * Массивы
-    * Особенности массивов в С/C++
-    * Работа с массивами
-    * Цикл по массиву (foreach)
-    * Передача массива в функцию
+  * [Препроцессор](/lecture_04.md#%D0%9F%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80)
+    * [Основные директивы препроцессора](/lecture_04.md#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D1%8B-%D0%BF%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80%D0%B0)
+    * [Условная компиляция](/lecture_04.md#%D0%A3%D1%81%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%86%D0%B8%D1%8F)
+    * [Стражи включения (include guards)](/lecture_04.md#%D0%A1%D1%82%D1%80%D0%B0%D0%B6%D0%B8-%D0%B2%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-include-guards)
+  * [Precompiled headers](/lecture_04.md#precompiled-headers)
+  * [Перечисления](/lecture_04.md#%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F)
+    * [Перечисления в C++98](/lecture_04.md#%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B2-c98)
+    * [Перечисления в C++11](/lecture_04.md#%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B2-c11)
+    * [Использование перечислений](/lecture_04.md#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%B5%D1%80%D0%B5%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D0%B9)
+  * [Массивы](/lecture_04.md#%D0%9C%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D1%8B)
+    * [Особенности массивов в С/C++](/lecture_04.md#%D0%9E%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2-%D0%B2-%D0%A1c)
+    * [Работа с массивами](/lecture_04.md#%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%B0%D0%BC%D0%B8-cc)
+    * [Цикл по массиву (foreach)](/lecture_04.md#%D0%A6%D0%B8%D0%BA%D0%BB-%D0%BF%D0%BE-%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D1%83-foreach)
+    * [Передача массива в функцию](/lecture_04.md#%D0%9F%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B0-%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%B0-%D0%B2-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8E)
 
 
 5. [Лекция 5](/lecture_05.md#%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-5)

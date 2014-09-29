@@ -16,7 +16,7 @@ void print(int i) {
 ### Стандартные функции
 
 Математические функции объявлены в заголовочном файле
-[<cmath>](http://www.cplusplus.com/reference/cmath/).
+[&lt;cmath>](http://www.cplusplus.com/reference/cmath/).
 
 ```cpp
 #include <cmath>

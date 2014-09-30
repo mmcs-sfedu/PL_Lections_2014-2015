@@ -2,4 +2,4 @@
 =
 
 
-->(ↄ) 2014 [Мехмат ЮФУ](http://it.mmcs.sfedu.ru/)<-
+### (ↄ) 2014 [Мехмат ЮФУ](http://it.mmcs.sfedu.ru/)

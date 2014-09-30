@@ -13,9 +13,9 @@
 	* [Тернарный оператор](lecture_01.html#%D0%A2%D0%B5%D1%80%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80)
 	* [Оператор выбора](lecture_01.html#%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%B0)
 	* [Операторы цикла](lecture_01.html#%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B-%D1%86%D0%B8%D0%BA%D0%BB%D0%B0)	
-		* Цикл while
-		* Цикл do-while
-		* Цикл for
+		* [Цикл while](/lecture_01.html#%D0%A6%D0%B8%D0%BA%D0%BB-while)
+		* [Цикл do-while](/lecture_01.html#%D0%A6%D0%B8%D0%BA%D0%BB-do-while)
+		* [Цикл for](/lecture_01.html#%D0%A6%D0%B8%D0%BA%D0%BB-for)
 
 
 2. [Лекция 2](lecture_02.html#%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F-2)

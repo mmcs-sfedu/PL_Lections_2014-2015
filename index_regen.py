@@ -16,21 +16,22 @@ index_file.write('Конспект лекций по курсу ЯП\n==========
 i = 0
 for lect_file_name in sorted(glob.glob('./lecture*.md')):
   lect_file = open(lect_file_name, 'r')
+  link_file_name = lect_file_name.replace('./', '').replace('.md', '.html')
   for line in lect_file:
     if line.startswith('# '):
       i = i+1
       index_file.write(line.replace('# ', '\n' + str(i) + '. [').replace('\n', '') + '](' + 
-		       lect_file_name.replace('./', '').replace('.md', '.html)\n')
+		       link_file_name + ')\n'
 		       ) 
     if line.startswith('## '):
       index_file.write(line.replace('## ', '\t* [').replace('`', '').replace('\n', '](') + 
-		       lect_file_name.replace('./', '').replace('.md', '.html#') + 
-		       urllib.parse.quote( line.replace('## ', '').replace('\n', '').encode('utf8') ) + ')\n'
+		       link_file_name + 
+		       urllib.parse.quote( line.replace('## ', '').replace('\n', '') ) + ')\n'
 		       )
     if line.startswith('### '):
       index_file.write(line.replace('### ', '\t\t* [').replace('`', '').replace('\n', '](') + 
-		       lect_file_name.replace('./', '').replace('.md', '.html#') + 
-		       urllib.parse.quote( line.replace('### ', '').replace('\n', '').encode('utf8') ) + ')\n'
+		       link_file_name + 
+		       urllib.parse.quote( line.replace('### ', '').replace('\n', '') ) + ')\n'
 		       )
   index_file.write('\n\n')
       

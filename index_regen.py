@@ -23,12 +23,12 @@ for lect_file_name in sorted(glob.glob('./lecture*.md')):
 		       lect_file_name.replace('./', '').replace('.md', '.html)\n')
 		       ) 
     if line.startswith('## '):
-      index_file.write(line.replace('## ', '\t* [').replace('\n', '](') + 
+      index_file.write(line.replace('## ', '\t* [').replace('`', '').replace('\n', '](') + 
 		       lect_file_name.replace('./', '').replace('.md', '.html#') + 
 		       urllib.parse.quote( line.replace('## ', '').replace('\n', '').encode('utf8') ) + ')\n'
 		       )
     if line.startswith('### '):
-      index_file.write(line.replace('### ', '\t\t* [').replace('\n', '](') + 
+      index_file.write(line.replace('### ', '\t\t* [').replace('`', '').replace('\n', '](') + 
 		       lect_file_name.replace('./', '').replace('.md', '.html#') + 
 		       urllib.parse.quote( line.replace('### ', '').replace('\n', '').encode('utf8') ) + ')\n'
 		       )

@@ -183,13 +183,3 @@ char* mysrtcpy(char* p, const char* q)
   return p-1;
 }
 ```
-
-### Стандартные функции работы с C-строками
-
-```cpp
-#include <cstring>
-
-size_t strlen(const char* p){...}
-// Возвращает указатель на последний символ скопированной строки
-char*  strcpy(char* p, const char* q){...}
-```

@@ -6,7 +6,21 @@ layout: default
 
 ## Линейный односвязный список в динамической памяти
 
-Используем для создания линейного односвязного списка [шаблон](lecture_07.html#%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80) структуры `node` из 7 лекции.
+Воспользуемся для создания линейного односвязного списка [шаблон](lecture_07.html#%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80) структуры `node` из 7 лекции:
+
+```cpp
+template<typename T>
+struct node {
+    T data;
+    node<T>* next;
+
+    node(T data, node<T>* next) {
+        // this указатель на себя
+        this->data = data;
+        this->node = next;
+    }
+};
+```
 
 При объявлении нового экземпляра структуры `node`, как это описано предыдущей лекции, этот 
 объект создается в статической памяти.
@@ -47,9 +61,8 @@ pn = new node<int>(5, pn);
 
 ```cpp
 tempate <typename T>
-void add_first(node<T>*& pn, T x)
-{
-  pn = new node<T>(x, pn);
+void add_first(node<T>* &pn, T x) {
+    pn = new node<T>(x, pn);
 }
 ```
 
@@ -97,9 +110,8 @@ add_first(pn, 3);
 
 ```cpp
 template<typename T>
-T p(T t)
-{
-  return t + 1;
+T inc(T t) {
+    return t + 1;
 }
 ```
 * В C++ разрешаются все действия с типом T, а в .NET и Java запрещаются все действия 
@@ -107,21 +119,19 @@ T p(T t)
 
 ```cpp
 Student s(...);
-p(s); // В C++ произойдет ошибка на этапе компиляции
-      // А в динамических языках это ошибка времени исполнения
+inc(s);  // В C++ произойдет ошибка на этапе компиляции
+         // А в динамических языках это ошибка времени исполнения
 ```
 
 ## Цикл по односвязному списку
 
 ```cpp
 template <typename T>
-void print(node<T>* p)
-{
-  while(p)
-  {
-    cout << p -> data << ' ';
-    p = p -> next;
-  }
+void print(node<T>* p) {
+    while(p) {
+        cout << p -> data << ' ';
+        p = p -> next;
+    }
 }
 ```
 
@@ -130,12 +140,12 @@ void print(node<T>* p)
 В PascalABC.NET работа с указателями на функции осуществляется следующим образом:
 
 ```pas
-type BitOp = function (a, b: real):real;
+type BitOp = function (a, b: real): real;
 
-vat op:BinOp;
-write(op(3,5));
+vaк op: BinOp;
+write(op(3, 5));
 op := mult;
-write(op(3,5))
+write(op(3, 5));
 ```
 
 Аналогичный код на C++ выглядит так:
@@ -144,48 +154,40 @@ write(op(3,5))
 // Указатель на функцию с таким прототипом
 typedef double (*BinOp) (double, double);
 
-BinOp op = &add;
-(*op)(3,5);
+BinOp bop = &add;
+(*bop)(3, 5);
+
+
+// Или как и описание переменной
+double (*op)(double, double)
+
 op = mult;
-op(3,5); // Так тоже можно вызвать template <typename T>
-void print(node<T>* p)
-{
-  while(p)
-  {
-    cout << p -> data << ' ';
-    p = p -> next;
-  }
-}
+op(3, 5);    // Так тоже можно вызывать template <typename T>
 ```
 
 ### Действие передаваемое параметром (callback)
 
 ```cpp
 template <typename T>
-// action - переменная типа "указатель на функцию"
-void for_each(node<T>* p, void(*action)(T&))
-{
-  while(p)
-  {
-    action(p -> data);
-    p = p -> next;
-  }
+// action — переменная типа "указатель на функцию"
+void for_each(node<T>* p, void (*action)(T&)) {
+    while(p) {
+        action(p -> data);
+        p = p -> next;
+    }
 }
-
-// *op - описание переменной
-double (*op)(double, double)
 ```
 В языке C/C++ структурная эквивалентность типов, а не именная.
 
 ```cpp
-void print(int& x)
-{
-  cout << x << ' ';
+void print(int &x) {
+    cout << x << ' ';
 }
-void inc(int& x)
-{
-  x++;
+
+void inc(int &x) {
+    x++;
 }
+
 for_each(pn, print);
 for_each(pn, inc);
 for_each(pn, print);

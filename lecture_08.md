@@ -10,11 +10,13 @@ layout: default
 
 ```cpp
 template<typename T>
-struct node {
+struct node
+{
     T data;
     node<T>* next;
 
-    node(T data, node<T>* next) {
+    node(T data, node<T>* next)
+    {
         // this указатель на себя
         this->data = data;
         this->node = next;
@@ -60,7 +62,8 @@ pn = new node<int>(5, pn);
 
 ```cpp
 tempate <typename T>
-void add_first(node<T>* &pn, T x) {
+void add_first(node<T>* &pn, T x)
+{
     pn = new node<T>(x, pn);
 }
 ```
@@ -115,7 +118,8 @@ add_first(pn, 3);
 
 ```cpp
 template<typename T>
-T inc(T t) {
+T inc(T t)
+{
     return t + 1;
 }
 ```
@@ -133,8 +137,10 @@ inc(s);  // В C++ произойдет ошибка на этапе компи�
 
 ```cpp
 template <typename T>
-void print(node<T>* p) {
-    while(p) {
+void print(node<T>* p)
+{
+    while(p)
+    {
         cout << p -> data << ' ';
         p = p -> next;
     }
@@ -148,7 +154,7 @@ void print(node<T>* p) {
 ```pas
 type BitOp = function (a, b: real): real;
 
-vaк op: BinOp;
+var op: BinOp;
 write(op(3, 5));
 op := mult;
 write(op(3, 5));
@@ -176,23 +182,22 @@ op(3, 5);    // Так тоже можно вызывать template <typename T
 ```cpp
 template <typename T>
 // action — переменная типа "указатель на функцию"
-void for_each(node<T>* p, void (*action)(T&)) {
-    while(p) {
+void for_each(node<T>* p, void (*action)(T&))
+{
+    while(p)
+    {
         action(p -> data);
         p = p -> next;
     }
 }
-```
 
-В языке C/C++ структурная эквивалентность типов, а не именная.
-**Но _здесь_ должны быть некоторые пояснения, что это значит.**
-
-```cpp
-void print(int &x) {
+void print(int &x)
+{
     cout << x << ' ';
 }
 
-void inc(int &x) {
+void inc(int &x)
+{
     x++;
 }
 
@@ -200,3 +205,5 @@ for_each(pn, print);
 for_each(pn, inc);
 for_each(pn, print);
 ```
+
+В языке C/C++ структурная эквивалентность типов, а не именная.

@@ -64,6 +64,7 @@ enum DayOfWeek {MON, TUE, WED, THU, FRI, SAT, SUN};
 ```cpp
 enum DayOfWeek {MON, TUE = 3, WED, THU, FRI, SAT, SUN};
 ```
+
 Тогда `MON = 0`, `TUE = 3`, `WED = 4`, …
 
 Благодаря тому, что все имена перечисления являются целыми числами 

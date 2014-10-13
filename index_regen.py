@@ -3,8 +3,6 @@
 import os
 import re
 import glob
-import urllib.parse
-from xml.etree.ElementTree import fromstring, ElementTree
 
 #============================================ Global vars ==============================================
 

@@ -180,7 +180,7 @@ def make_der_files():
 	  for line in lect_file:
 	    if line.startswith('## ') or line.startswith('### '):
 	      i = i+1
-	      der_file.write('\n\n<a name="' + str(i) + '">')
+	      der_file.write('\n\n<a name="' + str(i) + '">\n')
 	      der_file.write(line)
 	      der_file.write('</a>\n\n ')
 	    else:

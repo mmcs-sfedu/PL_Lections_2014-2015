@@ -182,7 +182,7 @@ def make_der_files():
 	      i = i+1
 	      der_file.write('<a name="' + str(i) + '">\n')
 	      der_file.write(line)
-	      der_file.write('</a>\n ')
+	      der_file.write('</a>\n\n ')
 	    else:
 	      der_file.write(line)
 	  

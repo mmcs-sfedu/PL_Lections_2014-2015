@@ -84,7 +84,8 @@ import glob
 
 src_dir = './'
 src_file_name_template = src_dir + 'lecture*.md'
-der_dir = './der'
+der_dir_name = 'der'
+der_dir = './' + der_dir_name
 der_file_name_template = der_dir + '/lecture*.md'
 
 #============================================= Functions ===============================================
@@ -134,22 +135,25 @@ def make_index():
 	index_file.write('Конспект лекций по курсу ЯП\n=====================\n\n')
 	
 	i = 0
-	regex_parts_tag = re.compile('.*<a name="|"></a>.*\n')
-	regex_tag = re.compile('.*<a name=".*"></a> |\n')
+	regex_parts_tag = re.compile('.*<a name="|">.*\n')
+	regex_link_text = re.compile('.*#')
+	pre_line = ''
+	
 	for der_file_name in sorted(glob.glob( der_file_name_template )):
 	  der_file = open(der_file_name, 'r')
 	  link_file_name = der_file_name.replace(der_dir + '/', '').replace('.md', '.html')
 	  for line in der_file:
 	    if line.startswith('# '):
 	      i=i+1
-	      index_file.write(str(i) + '. [' + line.replace('`', '').replace('# ', '') + '] (' + link_file_name + ')\n')
+	      index_file.write(str(i) + '. [ ' + line.replace('`', '').replace('# ', '').replace('\n', '') + ' ] (' + der_dir_name + '/' + link_file_name + ')\n')
 	    if line.startswith('## '):
 	      index_file.write('\t*')
 	    if line.startswith('### '):
 	      index_file.write('\t\t*')
 	    
 	    if line.startswith('## ') or line.startswith('### '):
-	      index_file.write(' [' + regex_tag.sub('', line).replace('`', '') + '] (' + link_file_name + '#' + regex_parts_tag.sub('', line) + ')\n')
+	      index_file.write(' [' + regex_link_text.sub('', line).replace('`', '').replace('\n', '') + ' ] (' + der_dir_name + '/' + link_file_name + '#' + regex_parts_tag.sub('', pre_line) + ')\n')
+	    pre_line = line
 	      
 	    
 	    
@@ -176,7 +180,9 @@ def make_der_files():
 	  for line in lect_file:
 	    if line.startswith('## ') or line.startswith('### '):
 	      i = i+1
-	      der_file.write(line.replace('# ', '# <a name="' + str(i) + '"></a> '))
+	      der_file.write('<a name="' + str(i) + '">\n')
+	      der_file.write(line)
+	      der_file.write('</a> ')
 	    else:
 	      der_file.write(line)
 	  

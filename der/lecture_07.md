@@ -2,10 +2,6 @@
 layout: default
 ---
 
----
-layout: default
----
-
 # Лекция 7
 
 
@@ -95,7 +91,7 @@ int* pi = new int;
 (*pi)++; // *pi == 6
 ```
 
-![pointers_and_dyn_mem1](./img/pointers_and_dyn_mem1.png "Управление динамической памятью с помощью указателей")
+![pointers_and_dyn_mem1](../img/pointers_and_dyn_mem1.png "Управление динамической памятью с помощью указателей")
 
 Освобождение памяти производится с помощью оператора `delete`.
 
@@ -104,7 +100,7 @@ delete pi;
 pi = nullptr;  // Хороший стиль
 ```
 
-![pointers_and_dyn_mem2](./img/pointers_and_dyn_mem2.png "Освобождение динамической памяти")
+![pointers_and_dyn_mem2](../img/pointers_and_dyn_mem2.png "Освобождение динамической памяти")
 
 Присваивание, указателю на высвобожденную память, значения `nullprt` защищает
 от ошибки при повторном (ошибочном вызове) `delete`.
@@ -245,7 +241,7 @@ cin >> m >> n; // Здесь размеры определяются на эта
 a = new int*[m];
 ```
 
-![two-dim_array_dyn_mem1](./img/two-dim_array_dyn_mem1.png "Выделение памяти для динамического массива - этап 1")
+![two-dim_array_dyn_mem1](../img/two-dim_array_dyn_mem1.png "Выделение памяти для динамического массива - этап 1")
 
 Каждый элемент имеет тип `int*`  и значение `NULL`.
 
@@ -257,7 +253,7 @@ for(int i = 0; i < m; i++)
 a[1][2] ~ *(*(a+1)+2)
 ```
 
-![two-dim_array_dyn_mem2](./img/two-dim_array_dyn_mem2.png "Выделение памяти для динамического массива - этап 2")
+![two-dim_array_dyn_mem2](../img/two-dim_array_dyn_mem2.png "Выделение памяти для динамического массива - этап 2")
 
 
 

@@ -2,10 +2,6 @@
 layout: default
 ---
 
----
-layout: default
----
-
 # Лекция 8
 
 
@@ -94,7 +90,7 @@ add_first(pn, 3);
 ...
 ```
 
-![singly_linked_list](./img/singly_linked_list.png "Создание односвязного списка")
+![singly_linked_list](../img/singly_linked_list.png "Создание односвязного списка")
 
 Надо обратить внимание на то, что в отличии от шаблона структуры, 
 в шаблоне функции указывать тип не надо, он автоматически 

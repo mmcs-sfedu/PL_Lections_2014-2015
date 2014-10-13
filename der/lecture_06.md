@@ -2,10 +2,6 @@
 layout: default
 ---
 
----
-layout: default
----
-
 # Лекция 6
 
 

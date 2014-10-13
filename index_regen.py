@@ -1,12 +1,17 @@
 #!/usr/bin/python
 
+import os
+import re
 import glob
 import urllib.parse
+from xml.etree.ElementTree import fromstring, ElementTree
 
 #============================================ Global vars ==============================================
 
 src_dir = './'
 src_file_name_template = src_dir + 'lecture*.md'
+der_dir = './der'
+der_file_name_template = der_dir + '/lecture*.md'
 
 #============================================= Functions ===============================================
 
@@ -47,8 +52,36 @@ def make_index():
 
 
 
+#==============================================
+
+def make_der_files():
+	try:
+	   os.makedirs(der_dir)
+	except OSError:
+	  pass
+	
+	for lect_file_name in sorted(glob.glob( src_file_name_template )):
+	  lect_file = open(lect_file_name, 'r')
+	  der_file = open(der_dir + lect_file_name.replace(src_dir, '/'), 'w')
+	  
+	  der_file.write('---\n')
+	  der_file.write('layout: default\n')
+	  der_file.write('---\n\n')
+	  
+	  i = 0
+	  for line in lect_file:
+	    if line.startswith('# ') or line.startswith('## ') or line.startswith('### '):
+	      i = i+1
+	      der_file.write(line.replace('# ', '# <a name="' + str(i) + '"></a> '))
+	    else:
+	      der_file.write(line)
+	  
+	  der_file.close()
+	  lect_file.close()
+
 #========================================== Executable code ============================================
 
+make_der_files()
 make_index()
 
 #=======================================================================================================

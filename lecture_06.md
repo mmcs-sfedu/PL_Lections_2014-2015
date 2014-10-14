@@ -119,7 +119,7 @@ for(int* p = a; p != a+10; *p++ = 0;);
 ```cpp
 void InitZero(int* a, int n)
 {
-  for(int* p = a; p != a+10;) *p++ = 0;
+  for(int* p = a; p != a+n;) *p++ = 0;
 }
 
 // int* a ~ int a[] 

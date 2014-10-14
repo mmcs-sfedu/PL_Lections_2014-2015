@@ -6,14 +6,14 @@ layout: default
 
 
 
-<a name="1">
+<a name="preprocessor">
 ## Препроцессор
 </a>
 
  
 
 
-<a name="2">
+<a name="basic_preprocessor_directives">
 ### Основные директивы препроцессора
 </a>
 
@@ -28,7 +28,7 @@ layout: default
 
 
 
-<a name="3">
+<a name="conditional_compilation">
 ### Условная компиляция
 </a>
 
@@ -46,7 +46,7 @@ layout: default
 
 
 
-<a name="4">
+<a name="guardians_of_inclusion_include_guards">
 ### Стражи включения (include guards)
 </a>
 
@@ -74,14 +74,14 @@ layout: default
 
 
 
-<a name="5">
+<a name="transfers">
 ## Перечисления
 </a>
 
  
 
 
-<a name="6">
+<a name="transfers_in_cpp_98">
 ### Перечисления в C++98
 </a>
 
@@ -98,6 +98,7 @@ enum DayOfWeek {MON, TUE, WED, THU, FRI, SAT, SUN};
 ```cpp
 enum DayOfWeek {MON, TUE = 3, WED, THU, FRI, SAT, SUN};
 ```
+
 Тогда `MON = 0`, `TUE = 3`, `WED = 4`, …
 
 Благодаря тому, что все имена перечисления являются целыми числами 
@@ -112,7 +113,7 @@ DayOfWeek wod = static_cast<DayOfWeek>(5);
 
 
 
-<a name="7">
+<a name="transfers_in_cpp_11">
 ### Перечисления в C++11
 </a>
 
@@ -146,7 +147,7 @@ DayOfWeek sat = static_cast<DayOfWeek>(6);
 
 
 
-<a name="8">
+<a name="using_enumerations">
 ### Использование перечислений
 </a>
 
@@ -167,7 +168,7 @@ switch (dayOfWeek) {
 
 
 
-<a name="9">
+<a name="arrays">
 ## Массивы
 </a>
 

@@ -6,7 +6,7 @@ layout: default
 
 
 
-<a name="1">
+<a name="multi_file_layout">
 ## Многофайловая компоновка
 </a>
 
@@ -40,7 +40,7 @@ void f(int i) {
 
 
 
-<a name="2">
+<a name="header_files">
 ## Заголовочные файлы
 </a>
 
@@ -77,6 +77,7 @@ void makeZero() {
     n = 0;
 }
 ```
+
 Имена пользовательских заголовочных файлов в директиве `include` 
 заключаются в двойные кавычки, а имена стандартных заголовочных файлов —
 в угловые скобки. Стандартные заголовочные файлы расположены в `/INCLUDE`.
@@ -89,7 +90,7 @@ void makeZero() {
 
 
 
-<a name="3">
+<a name="contents_of_header_files">
 ### Содержимое заголовочных файлов
 </a>
 
@@ -122,7 +123,7 @@ void makeZero() {
 
 
 
-<a name="4">
+<a name="global_descriptions_cpp_and_need_namespaces">
 ## Глобальные описания в C++ и необходимость пространств имен
 </a>
 
@@ -137,7 +138,7 @@ namespace MyNamespace{
 
 
 
-<a name="5">
+<a name="namespace_and_header_files">
 ## Пространства имен и заголовочные файлы
 </a>
 
@@ -154,7 +155,7 @@ namespace MyNamespace{
 
 
 
-<a name="6">
+<a name="main_stages_of_project_build">
 ## Основные этапы сборки проекта
 </a>
 

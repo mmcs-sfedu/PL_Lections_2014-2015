@@ -6,7 +6,7 @@ layout: default
 
 
 
-<a name="1">
+<a name="functions">
 ## Функции
 </a>
 
@@ -24,7 +24,7 @@ void print(int i) {
 
 
 
-<a name="2">
+<a name="standard_features">
 ### Стандартные функции
 </a>
 
@@ -39,7 +39,7 @@ abs(x);  floor(x);  sin(x);  pow(x, y);  sqrt(x);
 
 
 
-<a name="3">
+<a name="inline_functions">
 ### inline-функции
 </a>
 
@@ -65,7 +65,7 @@ int c = add(a, 5);    // int c = a + 5;
 
 
 
-<a name="4">
+<a name="links">
 ## Ссылки
 </a>
 
@@ -83,7 +83,7 @@ cout << i;     // i == 3
 
 
 
-<a name="5">
+<a name="passing_argument_to_func_by_reference">
 ### Передача аргумента в функцию по ссылке
 </a>
 
@@ -102,7 +102,7 @@ int main() {
 
 
 
-<a name="6">
+<a name="structure">
 ## Структуры
 </a>
 
@@ -124,7 +124,7 @@ int main() {
 
 
 
-<a name="7">
+<a name="transmission_struct_func">
 ### Передача структуры в функцию
 </a>
 

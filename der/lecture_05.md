@@ -6,7 +6,7 @@ layout: default
 
 
 
-<a name="1">
+<a name="strings_in_c_style">
 ## Строки в стиле C
 </a>
 
@@ -38,7 +38,7 @@ std::cin.getline(str, 14);  // 14 — количество вводимых си
 
 
 
-<a name="2">
+<a name="strings_in_cpp_style">
 ## Строки в стиле C++
 </a>
 
@@ -63,7 +63,7 @@ s1 < s2;	// Строки можно сравнивать
 
 
 
-<a name="3">
+<a name="input_output">
 ### Ввод-вывод
 </a>
 
@@ -78,7 +78,7 @@ cin >> s;
 
 
 
-<a name="4">
+<a name="how_to_pass_func_c_and_cpp_line">
 ### Как передавать в функции C- и C++-строки
 </a>
 
@@ -98,7 +98,7 @@ void p1(const string &s)   // s нельзя менять
 
 
 
-<a name="5">
+<a name="two_dimensional_arrays">
 ## Двумерные массивы
 </a>
 
@@ -116,7 +116,7 @@ void p1(const string &s)   // s нельзя менять
 
 
 
-<a name="6">
+<a name="transmission_as_func_of_2d_arrays">
 ### Передача в функции двумерных массивов
 </a>
 
@@ -134,7 +134,7 @@ void print(int a[3][4], int m, int n) {
 
 
 
-<a name="7">
+<a name="determination_of_types_cpp">
 ## Определение типов в C++
 </a>
 
@@ -155,7 +155,7 @@ void print(Matr a, int m, int n);
 
 
 
-<a name="8">
+<a name="pointers_and_addresses">
 ## Указатели и адреса
 </a>
 
@@ -191,11 +191,12 @@ p = nullptr; // C++11
 
 
 
-<a name="9">
+<a name="pointers_and_references">
 ### Указатели и ссылки
 </a>
 
- ```cpp
+ 
+```cpp
 //Указатели
 int *p = &i;
 *p = 6; 
@@ -205,14 +206,15 @@ int &r = i;   // i и r — одна ячейка памяти
 r = 6;
 ```
 
-Если `&` пишется после названия типа, то это [ссылка](lecture_02.md#%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B8). В противном случае, 
-если он пишется перед именем переменной, то это адрес этой переменной. 
+Если `&` пишется после названия типа, то это [ссылка](lecture_02.md#4).
+В противном случае, если он пишется перед именем переменной, 
+то это адрес этой переменной. 
 Ссылку можно трактовать, как указатель, который постоянно находится в 
 разыменованном состоянии.
 
 
 
-<a name="10">
+<a name="passing_parameters_to_func">
 ### Передача параметров в функции
 </a>
 
@@ -243,7 +245,7 @@ q(&i);     // i == 6
 
 
 
-<a name="11">
+<a name="pointer_to_void_asterisk">
 ### Указатель `void*`
 </a>
 
@@ -291,7 +293,7 @@ pb = pa;
 
 
 
-<a name="12">
+<a name="pointers_to_structures">
 ### Указатели на структуры
 </a>
 
@@ -310,7 +312,7 @@ pp -> age = 20;   // Операция доступа к полю в памяти
 
 
 
-<a name="13">
+<a name="pointers_and_constancy">
 ### Указатели и константность
 </a>
 
@@ -334,7 +336,7 @@ void q(const int *p) {
 
 
 
-<a name="14">
+<a name="const_pointers">
 ### Константные указатели
 </a>
 

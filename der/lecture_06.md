@@ -6,7 +6,7 @@ layout: default
 
 
 
-<a name="1">
+<a name="references_to_constants">
 ## Ссылки на константы
 </a>
 
@@ -23,7 +23,7 @@ layout: default
 
 
 
-<a name="2">
+<a name="pointers_and_arrays">
 ## Указатели и массивы
 </a>
 
@@ -45,7 +45,7 @@ int* p = &a[0]; // адрес первого элемента
 
 
 
-<a name="3">
+<a name="pointers_operation">
 ### Операции при работе с указателями
 </a>
 
@@ -108,7 +108,7 @@ int* p = a;
 
 
 
-<a name="4">
+<a name="idiom_asterisk_p_plus_plus">
 ### Идиома *p++
 </a>
 
@@ -140,7 +140,7 @@ for(int* p = a; p != a+10; *p++ = 0;);
 
 
 
-<a name="5">
+<a name="passing_array_to_func_with_pointer">
 ### Передача массива в функцию с помощью указателя
 </a>
 
@@ -168,7 +168,7 @@ while(pa != a + 10)
 
 
 
-<a name="6">
+<a name="on_line_and_indices">
 ## С-строки и указатели
 </a>
 

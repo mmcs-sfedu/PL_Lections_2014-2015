@@ -6,7 +6,7 @@ layout: default
 
 
 
-<a name="1">
+<a name="standard_funcs_for_c_style_strings">
 ## Стандартные функции для работы с C-строками
 </a>
 
@@ -40,7 +40,7 @@ char* strstr(const char* s, const char* s1);
 
 
 
-<a name="2">
+<a name="control_memory_when_working_with_these_funcs">
 ### Контроль памяти при работе с этими функциями
 </a>
 
@@ -71,7 +71,7 @@ strncpy(s2, s1, 4);  // Защищает от переполнения
 
 
 
-<a name="3">
+<a name="pointers_and_dyn_memory">
 ## Указатели и динамическая память
 </a>
 
@@ -108,7 +108,7 @@ pi = nullptr;  // Хороший стиль
 
 
 
-<a name="4">
+<a name="errors_when_working_with_dyn_memory">
 ### Ошибки при работе с динамической памятью
 </a>
 
@@ -155,7 +155,7 @@ delete pi;
 
 
 
-<a name="5">
+<a name="arrays_in_heap_dyn_arrays">
 ## Массивы в динамической памяти(динамические массивы)
 </a>
 
@@ -181,7 +181,7 @@ delete[] pi;
 
 
 
-<a name="6">
+<a name="how_to_pass_dyn_array_to_func">
 ### Как передавать динамические массивы в функции
 </a>
 
@@ -201,7 +201,7 @@ print(pi, 10);
 
 
 
-<a name="7">
+<a name="2d_dyn_arrays">
 ## Двумерные динамические массивы 
 </a>
 
@@ -209,7 +209,7 @@ print(pi, 10);
 
 
 
-<a name="8">
+<a name="allocate_memory_for_static_arrays">
 ### Выделение памяти для статических массивов
 </a>
 
@@ -228,7 +228,7 @@ void f(int a[][4], int m, int n)
 
 
 
-<a name="9">
+<a name="allocating_memory_for_dyn_arrays">
 ### Выделение памяти для динамических массивов
 </a>
 
@@ -257,7 +257,7 @@ a[1][2] ~ *(*(a+1)+2)
 
 
 
-<a name="10">
+<a name="transfer_of_2d_dyn_array_as_func_of">
 ### Передача двумерного динамического массива в функции
 </a>
 
@@ -282,7 +282,7 @@ void print(const int** a, int m, int n)
 
 
 
-<a name="11">
+<a name="returns_memory">
 ### Возврат памяти
 </a>
 
@@ -295,7 +295,7 @@ delete[] a;
 
 
 
-<a name="12">
+<a name="dynamic_data_structures">
 ## Динамические структуры данных
 </a>
 
@@ -332,7 +332,7 @@ node* p = &n3;
 
 
 
-<a name="13">
+<a name="templates_structures">
 ## Шаблоны структур
 </a>
 

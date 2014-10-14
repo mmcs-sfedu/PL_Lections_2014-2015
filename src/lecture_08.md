@@ -49,7 +49,7 @@ node<int>* pn = new node<int>(5, nullptr);
 ## Добавление элемента в начало односвязного списка
 
 ```cpp
-node<int> pn = nullptr;
+node<int>* pn = nullptr;
 pn = new node<int>(5, pn);
 ```
 

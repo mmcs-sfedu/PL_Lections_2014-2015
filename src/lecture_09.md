@@ -60,12 +60,6 @@ void delete_list(node<T>* p)
 [doc sfind]: http://www.cplusplus.com/reference/string/string/find/
 [doc snpos]: http://www.cplusplus.com/reference/string/string/npos/
 
-#### Как передать строку в функцию
-
-```cpp
-void f(const string &s)
-```
-
 ### Векторы
 
 ```cpp

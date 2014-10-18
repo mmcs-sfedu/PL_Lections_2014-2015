@@ -34,23 +34,31 @@ void delete_list(node<T>* p)
 
 ### Работа со строками
 
-```cpp
-#include <string>
+Операции  | Описание
+:-------: | :--------:
+[`s[i]`][doc scrotchets] | i-ый символ
+[`s.size()`][doc ssize]  | Размер строки
+[`s.c_str()`][doc sc_str]| Константный указатель на _c_-строку
+[`string s1 = s`][doc sequality]| Новая копия строки
+|
+[`s.erase(1, 3)`][doc serase]   | Удаление 3 символов
+[`s.substr(1, 3)`][doc ssubstr] | Подстрока из 3 символов
+[`s.insert(1, s1)`][doc sinsert]| Вставка s1 перед 1 символом
+[`s.find_first_of(s1)`][doc sfo]| Поиск любого символа из s1
+[`s.find(s1)`][doc sfind]       | Поиск подстроки в строке
+|
+[`string::npos`][doc snpos]     | -1, ~ нет совпадений
 
-using namespace std;
-
-s.size();	// Получить размер строки
-string s1 = s;	// В этом случае s и s1 не разделяют общую память
-s.substr(0, 2);	// 
-s[i]		// Возможно обращение по индексу
-s.insert(1, s1);//
-s.erase(1, 2);
-s.c_str()	// Преобразование к типу char*
-s.find_first_of(s1)
-s.find(s1)	// Поиск подстроки в строке
-// если не найдено, то
-// s.find(s1) == string::npos
-```
+[doc scrotchets]: http://www.cplusplus.com/reference/string/string/operator[]/
+[doc ssize]: http://www.cplusplus.com/reference/string/string/size/
+[doc sc_str]: http://www.cplusplus.com/reference/string/string/c_str/
+[doc sequality]: http://www.cplusplus.com/reference/string/string/operator=/
+[doc ssubstr]: http://www.cplusplus.com/reference/string/string/substr/
+[doc sinsert]: http://www.cplusplus.com/reference/string/string/insert/
+[doc serase]: http://www.cplusplus.com/reference/string/string/erase/
+[doc sfo]: http://www.cplusplus.com/reference/string/string/find_first_of/
+[doc sfind]: http://www.cplusplus.com/reference/string/string/find/
+[doc snpos]: http://www.cplusplus.com/reference/string/string/npos/
 
 #### Как передать строку в функцию
 

@@ -7,12 +7,12 @@
 template <typename T>
 void delete_list(node<T>* p)
 {
-  while(p)
-  {
-    auto p1 = p;
-    p = p->next;
-    delete p1;
-  }
+    while(p)
+    {
+        auto p1 = p;
+        p = p->next;
+        delete p1;
+    }
 }
 ```  
 
@@ -175,18 +175,19 @@ d = i * d;
 
 class Date
 {
-  private: // это слово писать не обязательно
-    int y, m, d;
+    private: // это слово писать не обязательно
+        int y, m, d;
   
-  public:
-    // Конструктор класса
-    Date(int d, int m, int y)
-    {
-      this->d = d;
-      this->m = m;
-      this->y = y;
-    }
-    void add_days(int n);
+    public:
+        // Конструктор класса
+        Date(int d, int m, int y)
+        {
+          this->d = d;
+          this->m = m;
+          this->y = y;
+        }
+        
+        void add_days(int n);
 };
 ```
 
@@ -217,7 +218,7 @@ Date d2(31, 12, 14);
 d += 7; // 
 d1 = d1 - 7;
 int n = d2 - d;
-if(d == d1)...
+if (d == d1)...
 d++; ++d; d1--; --d1;
 d2++;
 cout << d << ' ' << d1
@@ -252,12 +253,12 @@ a.operator@(b)
 class Date
 {
 
-  ...
+    ...
 
-  void operator+=(int n)
-  {
-    add_days(n); // inline
-  }
+    void operator+=(int n)
+    {
+        add_days(n); // inline
+    }
 }
 ```
 

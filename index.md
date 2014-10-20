@@ -1,3 +1,7 @@
+[//]: <> ( WARNING!!! )
+[//]: <> ( This file was generated automatically. )
+[//]: <> ( All changes made here will be erased. )
+
 ---
 layout: default
 title: Лекции по курсу «Языки программирования» 2014, ФИИТ на Мехмате ЮФУ

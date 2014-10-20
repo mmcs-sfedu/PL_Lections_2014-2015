@@ -58,7 +58,7 @@ ol.toc {
 ol.toc>li {
   padding: 5px 0;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   list-style-type: none;
 }
 ol.toc>li a.active {

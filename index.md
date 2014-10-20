@@ -107,3 +107,13 @@ title: Лекции по курсу «Языки программировани�
 		* [Действие передаваемое параметром (callback)] (der/lecture_08.html#callback)
 
 
+9. [Лекция 9] (der/lecture_09.html)
+	* [Освобождение памяти занимаемой списком] (der/lecture_09.html#freeing_memory_occupied_list)
+	* [Векторы и строки (С++)] (der/lecture_09.html#vectors_and_strings_cpp)
+		* [Работа со строками] (der/lecture_09.html#working_with_strings)
+		* [Векторы] (der/lecture_09.html#vectors)
+	* [Классы и перегрузка операций] (der/lecture_09.html#classes_and_operator_overloading)
+		* [Перегрузка бинарной операции] (der/lecture_09.html#overloading_binary_operation)
+		* [Передача объектов в функцию] (der/lecture_09.html#passing_objects_to_func)
+
+

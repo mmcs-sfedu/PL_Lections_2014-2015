@@ -28,7 +28,7 @@ def make_index():
 	write_index_head(index_file)
 	
 	i = 0
-	regex_parts_tag = re.compile('.*<a name="|">.*\n')
+	regex_parts_tag = re.compile('.*<a id="|" title=".*\n')
 	regex_link_text = re.compile('.*#|`|\n')
 	pre_line = ''
 	

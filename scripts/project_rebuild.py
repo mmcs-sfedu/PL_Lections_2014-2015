@@ -9,11 +9,12 @@ from translate import Translator
 
 #============================================ Global vars ==============================================
 
-src_dir = sys.path[0] + '/src/'
+src_dir_name = 'src'
+src_dir = sys.path[0] + '/' + src_dir_name + '/'
 src_file_name_template = src_dir + 'lecture*.md'
-der_dir_name = 'der'
+der_dir_name = 'lecture'
 der_dir = sys.path[0] + '/' + der_dir_name
-der_file_name_template = der_dir + '/lecture*.md'
+der_file_name_template = der_dir + '/*.md'
 dictionary_name = 'dictionary'
 dictionary = sys.path[0] + '/' + dictionary_name
 dictionary_separator = ' : '
@@ -24,11 +25,7 @@ translator = Translator('en', 'ru')
 def make_index():
 	index_file = open('index.md', 'w', encoding='utf8')
 	
-	index_file.write('---\n')
-	index_file.write('layout: default\n')
-	index_file.write('title: Лекции по курсу «Языки программирования» 2014, ФИИТ на Мехмате ЮФУ\n')
-	index_file.write('---\n\n')
-	index_file.write('Конспект лекций по курсу ЯП\n=====================\n\n')
+	write_index_head(index_file)
 	
 	i = 0
 	regex_parts_tag = re.compile('.*<a name="|">.*\n')
@@ -67,13 +64,12 @@ def make_der_files(refresh_dict):
 	if refresh_dict:
 		clean_dictionary()
 	
-	for lect_file_name in sorted(glob.glob( src_file_name_template )):
+	for lect_file_name in glob.glob( src_file_name_template ):
 		lect_file = open(lect_file_name, 'r', encoding='utf8')
-		der_file = open(lect_file_name.replace('src', 'der'), 'w', encoding='utf8')
+		der_file = open(lect_file_name.replace(src_dir_name, der_dir_name).
+		  replace('lecture_', ''), 'w', encoding='utf8')
 		
-		der_file.write('---\n')
-		der_file.write('layout: default\n')
-		der_file.write('---\n\n')
+		write_der_head(der_file)
 		
 		regex_str_val = re.compile('.*# |`|\n')
 		for line in lect_file:
@@ -94,6 +90,22 @@ def make_der_files(refresh_dict):
 		
 		der_file.close()
 		lect_file.close()
+
+#==============================================
+
+def write_index_head(file_to_write):
+	file_to_write.write('---\n')
+	file_to_write.write('layout: default\n')
+	file_to_write.write('title: Лекции по курсу «Языки программирования» 2014, ФИИТ на Мехмате ЮФУ\n')
+	file_to_write.write('---\n\n')
+	file_to_write.write('Конспект лекций по курсу ЯП\n=====================\n\n')
+
+#==============================================
+
+def write_der_head(file_to_write):
+	file_to_write.write('---\n')
+	file_to_write.write('layout: default\n')
+	file_to_write.write('---\n\n')
 
 #==============================================
 

@@ -75,3 +75,10 @@ inline-функции : inline_functions
 Отличие шаблонов C++ от обобщений .NET : unlike_cpp_templates_generalizations_dot_net
 Цикл по односвязному списку : loop_through_linked_list
 Указатели на функции : function_pointers
+Освобождение памяти занимаемой списком : freeing_memory_occupied_list
+Векторы и строки (С++) : vectors_and_strings_cpp
+Работа со строками : working_with_strings
+Векторы : vectors
+Классы и перегрузка операций : classes_and_operator_overloading
+Перегрузка бинарной операции : overloading_binary_operation
+Передача объектов в функцию : passing_objects_to_func

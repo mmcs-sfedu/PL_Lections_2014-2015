@@ -39,14 +39,14 @@ def make_index():
 		for line in der_file:
 			if line.startswith('# '):
 				i=i+1
-				index_file.write(str(i) + '. [' + line.replace('`', '').replace('# ', '').replace('\n', '') + '] (' + der_dir_name + '/' + link_file_name + ')\n')
+				index_file.write(str(i) + '. [' + line.replace('`', '').replace('# ', '').replace('\n', '') + '](' + der_dir_name + '/' + link_file_name + ')\n')
 			if line.startswith('## '):
 				index_file.write('\t*')
 			if line.startswith('### '):
 				index_file.write('\t\t*')
 			
 			if line.startswith('## ') or line.startswith('### '):
-				index_file.write(' [' + regex_link_text.sub('', line).strip() + '] (' + der_dir_name + '/' + link_file_name + '#' + regex_parts_tag.sub('', pre_line) + ')\n')
+				index_file.write(' [' + regex_link_text.sub('', line).strip() + '](' + der_dir_name + '/' + link_file_name + '#' + regex_parts_tag.sub('', pre_line) + ')\n')
 			pre_line = line
 		
 		index_file.write('\n\n')

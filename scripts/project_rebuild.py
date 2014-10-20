@@ -94,6 +94,7 @@ def make_der_files(refresh_dict):
 #==============================================
 
 def write_index_head(file_to_write):
+	write_warning(file_to_write)
 	file_to_write.write('---\n')
 	file_to_write.write('layout: default\n')
 	file_to_write.write('title: Лекции по курсу «Языки программирования» 2014, ФИИТ на Мехмате ЮФУ\n')
@@ -103,9 +104,19 @@ def write_index_head(file_to_write):
 #==============================================
 
 def write_der_head(file_to_write):
+	write_warning(file_to_write)
 	file_to_write.write('---\n')
 	file_to_write.write('layout: default\n')
 	file_to_write.write('---\n\n')
+
+#==============================================
+
+def write_warning(file_to_write):
+	file_to_write.write('<!--\n')
+	file_to_write.write('WARNING!!!\n')
+	file_to_write.write('This file was generated automatically.\n')
+	file_to_write.write('All changes made here will be erased.\n')
+	file_to_write.write('-->\n\n\n')
 
 #==============================================
 

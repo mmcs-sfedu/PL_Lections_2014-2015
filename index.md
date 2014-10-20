@@ -1,7 +1,3 @@
-[//]: <> ( WARNING!!! )
-[//]: <> ( This file was generated automatically. )
-[//]: <> ( All changes made here will be erased. )
-
 ---
 layout: default
 title: Лекции по курсу «Языки программирования» 2014, ФИИТ на Мехмате ЮФУ
@@ -9,6 +5,10 @@ title: Лекции по курсу «Языки программировани�
 
 Конспект лекций по курсу ЯП
 =====================
+
+[//]: <> ( WARNING!!! )
+[//]: <> ( This file was generated automatically. )
+[//]: <> ( All changes made here will be erased. )
 
 1. [Лекция 1](lecture/01.html)
 	* [История C++](lecture/01.html#history_c_plus_plus)

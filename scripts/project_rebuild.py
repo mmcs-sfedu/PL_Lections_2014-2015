@@ -111,9 +111,11 @@ def write_der_head(file_to_write):
 #==============================================
 
 def write_warning(file_to_write):
-	file_to_write.write('[//]: <> ( WARNING!!! )\n')
-	file_to_write.write('[//]: <> ( This file was generated automatically. )\n')
-	file_to_write.write('[//]: <> ( All changes made here will be erased. )\n\n')
+	file_to_write.write('<!-- \n')
+	file_to_write.write('WARNING!!!\n')
+	file_to_write.write('This file was generated automatically.\n')
+	file_to_write.write('All changes made here will be erased.\n')
+	file_to_write.write('-->\n\n')
 
 #==============================================
 

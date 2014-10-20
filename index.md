@@ -6,9 +6,11 @@ title: Лекции по курсу «Языки программировани�
 Конспект лекций по курсу ЯП
 =====================
 
-[//]: <> ( WARNING!!! )
-[//]: <> ( This file was generated automatically. )
-[//]: <> ( All changes made here will be erased. )
+<!-- 
+WARNING!!!
+This file was generated automatically.
+All changes made here will be erased.
+-->
 
 1. [Лекция 1](lecture/01.html)
 	* [История C++](lecture/01.html#history_c_plus_plus)

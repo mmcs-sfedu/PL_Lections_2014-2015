@@ -81,10 +81,9 @@ def make_der_files(refresh_dict):
 					lat_str_val = format_tag(cyr_to_lat(str_val))
 					add_to_dictionary(str_val, lat_str_val)
 					
-				der_file.write('\n\n<a name="' + lat_str_val + '">\n')
+				der_file.write('\n\n<a id="' + lat_str_val + '" ' + 'title="' + str_val + '" class="toc-item"></a>\n')
 				
-				der_file.write(line)
-				der_file.write('</a>\n\n ')
+				der_file.write(line + '\n\n')
 			else:
 				der_file.write(line)
 		

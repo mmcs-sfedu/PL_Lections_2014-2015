@@ -123,3 +123,12 @@ All changes made here will be erased.
 		* [Передача объектов в функцию](lecture/09.html#passing_objects_to_func)
 
 
+10. [Лекция 10](lecture/10.html)
+	* [Конструктор со списком инициализации](lecture/10.html#constructor_with_list_of_initialization)
+	* [Перегрузка операций](lecture/10.html#operator_overloading)
+		* [Перегрузка операции сравнения на равенство](lecture/10.html#overload_comparison_operators_for_equality)
+		* [Перегрузка операции вывода в поток (чтения из потока)](lecture/10.html#overload_io-stream_operations)
+		* [Перегрузка арифметических операций](lecture/10.html#overloading_arithmetic_operations)
+		* [Перегрузка унарных операций](lecture/10.html#overloading_unary_operations)
+
+

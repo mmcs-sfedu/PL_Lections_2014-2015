@@ -82,3 +82,9 @@ inline-функции : inline_functions
 Классы и перегрузка операций : classes_and_operator_overloading
 Перегрузка бинарной операции : overloading_binary_operation
 Передача объектов в функцию : passing_objects_to_func
+Конструктор со списком инициализации : constructor_with_list_of_initialization
+Перегрузка операций : operator_overloading
+Перегрузка операции сравнения на равенство : overload_comparison_operators_for_equality
+#Перегрузка операции вывода в поток (чтения из потока) : overload_io-stream_operations
+Перегрузка арифметических операций : overloading_arithmetic_operations
+Перегрузка унарных операций : overloading_unary_operations

@@ -64,8 +64,7 @@ class Date {
 из лекции 9.
 
 ```cpp
-class Date
-{
+class Date {
   int d, m, y;
 
   publuc:
@@ -167,8 +166,7 @@ public:
 Рассмотрим перегрузку арифметических операций на примере класса `BigInteger`.
 
 ```cpp
-class BigInteger
-{
+class BigInteger {
   int data[1024];
 
 public:
@@ -202,8 +200,7 @@ BigInteger operator+(BigInteger const & bi1, BigInteger const & bi2)
 Приведём пример перегрузки унарной префиксной операции `++`.
 
 ```cpp
-class Date
-{
+class Date {
   // …
   // определение префиксного ++
   Date & operator++()

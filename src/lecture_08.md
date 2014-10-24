@@ -15,7 +15,7 @@ struct node
     {
         // this указатель на себя
         this->data = data;
-        this->node = next;
+        this->next = next;
     }
 };
 ```

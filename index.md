@@ -129,6 +129,16 @@ All changes made here will be erased.
 		* [Перегрузка операции сравнения на равенство](lecture/10.html#overload_comparison_operators_for_equality)
 		* [Перегрузка операции вывода в поток (чтения из потока)](lecture/10.html#overload_io-stream_operations)
 		* [Перегрузка арифметических операций](lecture/10.html#overloading_arithmetic_operations)
-		* [Перегрузка унарных операций](lecture/10.html#overloading_unary_operations)
+
+
+11. [Лекция 11 ](lecture/11.html)
+	* [Перегрузка унарных операций](lecture/11.html#overloading_unary_operations)
+		* [Префиксная унарная операция (@a ++a --a) (общий случай)](lecture/11.html#prefix_unary_operator)
+		* [Постфиксная унарная операция (a@ a++ a--)](lecture/11.html#postfix_unary_operator)
+	* [Перегрузка операции !=](lecture/11.html#overloading_not_eq)
+	* [Класс динамического массива](lecture/11.html#class_of_dynamic_array)
+		* [Константные методы](lecture/11.html#constant_method)
+	* [Перегрузка операции []](lecture/11.html#overload_array_subscript)
+	* [Деструктор и его необходимость](lecture/11.html#destructor_and_its_necessity)
 
 

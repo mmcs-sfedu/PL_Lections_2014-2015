@@ -88,3 +88,10 @@ inline-функции : inline_functions
 #Перегрузка операции вывода в поток (чтения из потока) : overload_io-stream_operations
 Перегрузка арифметических операций : overloading_arithmetic_operations
 Перегрузка унарных операций : overloading_unary_operations
+#Префиксная унарная операция (@a ++a --a) (общий случай) : prefix_unary_operator
+#Постфиксная унарная операция (a@ a++ a--) : postfix_unary_operator
+#Перегрузка операции !=  : overloading_not_eq
+Класс динамического массива : class_of_dynamic_array
+Константные методы : constant_method
+#Перегрузка операции [] : overload_array_subscript
+Деструктор и его необходимость : destructor_and_its_necessity

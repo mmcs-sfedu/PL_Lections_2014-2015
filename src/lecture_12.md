@@ -80,7 +80,7 @@ myvector(myvector const & other): size(other.size), name(other.name)
 ### Три слуая когда вызывается конструктор копий
 
 1. `myvector myv2 = myv1`;
-2. Вызов функции с передачей параметра по значению `void f(Student st) {/* ... */}`
+2. Вызов функции с передачей параметра по значению `void f(Student st) {/* … */}`
 3. Возвращение объекта по значению `Student g() {/* .. */}`
 
 **Пример**
@@ -118,20 +118,20 @@ class Empty{
   public:
     Empty() {}
 
-    Empty(Empty const &) {/* ... */}
+    Empty(Empty const &) {/* … */}
 
-    Empty & operator=(Empty const &) {/* ... */}
+    Empty & operator=(Empty const &) {/* … */}
 
-    ~Empty() {/* ... */}
+    ~Empty() {/* … */}
 };
 ```
 
 Видим, что здесь приутствуют 4 функции:
 
-* `Empty()` - конструктор по-умолчанию
-* `Empty(Empty const &)` - конструктор копий
-* `Empty & operator=(Empty const &)` - операция копирующего присваивания
-* `~Empty()` - деструктор
+* `Empty()` ― конструктор по-умолчанию
+* `Empty(Empty const &)` ― конструктор копий
+* `Empty & operator=(Empty const &)` ― операция копирующего присваивания
+* `~Empty()` ― деструктор
 
 Такое описание класса эквивалентно `class Empty {};`. Т.е эти 4 функции генерируются автоматически.
 

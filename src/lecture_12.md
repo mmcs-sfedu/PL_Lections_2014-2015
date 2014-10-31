@@ -195,10 +195,27 @@ myvector & operator=(myvector const & other)
 
 ## Идиома copy-and-swap
 
+Идиома **copy-and-swap** позволяет разрабатывать устойчивые к исключениям операторы присваивания.
+**Сopy-and-swap** предполагает реализацию операции копирующего присваивания с использованием конструктора копий и создания метода `void swap(myvector & other)`, принимающего ссылку на объект. 
+
 ```cpp
-void swap(myvector const & other)
-{
-  std::swap(data, other.data); 
-  // Для всех полей
-}
+class myvector {
+  …  
+public:
+  myvector & operator=(const myvector & other)
+  {
+    myvector tmp(other); // Вызов конструктора копий
+    this -> swap(tmp);
+    
+    cout << "copy assigment" << endl;
+    return *this;
+  }
+  
+  void swap(myvector & other)
+  {
+    std::swap(data, other.data);
+    std::swap(size, other.size); 
+    std::swap(name, other.name); 
+  }
+};
 ```

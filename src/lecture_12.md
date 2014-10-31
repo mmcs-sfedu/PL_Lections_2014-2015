@@ -176,33 +176,65 @@ main()
 
 ## Операция копирующего присваивания
 
-```cpp
-myvector & operator=(myvector const & other)
-  {
-    if(this != &other) {
-      delete [] data;
+Реализация метода `operator=` класса `myvector` такова, что при выполнении следующего кода происходит копирование указателя, а не объекта:
 
-      size = other.size;
-      data = new int[size];
-      copy(other.data, other.data + size, data);
-      name = other.name;
-      ++name[2];
-    }
-    
-    return *this;
-  }
+```cpp
+  myvector myv1;
+  myvector myv2;
+  myv2 = myv1;
 ```
 
-## Идиома copy-and-swap
+Если в этом случае нам необходимо копировать сам объект, тогда выполняется реализация операции копирующего присваивания:
+
+```cpp
+myvector & operator=(myvector const & other)
+{
+  // Операция копирующего присваивания всегда начинается с оператора if
+  // для исключения случая a == a
+  if(this != &other) {
+    delete [] data; // Нам потребуется новый размер поля data
+    
+    size = other.size;
+    data = new int[size];
+    copy(other.data, other.data + size, data);
+    name = other.name;
+    ++name[2];
+  }
+  
+  return *this;
+}
+```
+
+Данная реализация далека от идеала. Например выполнение `delete [] data;` может привести к тому, что при возникновении исключения на этапе копирования данных поле `data` может остаться "сломанным". Для избежания такой ситуации можно завести переменную `newdata`, а операцию удаления `data` перенести в конец метода.
+
+```cpp
+myvector & operator=(myvector const & other)
+{
+  if(this != &other) {
+    size = other.size;
+    newdata = new int[size];
+    copy(other.data, other.data + size, data);
+    name = other.name;
+    ++name[2];
+
+    delete [] data;
+    data = newdata;
+  }
+      
+  return *this;
+}
+```
+
+### Идиома copy-and-swap
 
 Идиома **copy-and-swap** позволяет разрабатывать устойчивые к исключениям операторы присваивания.
-**Сopy-and-swap** предполагает реализацию операции копирующего присваивания с использованием конструктора копий и создания метода `void swap(myvector & other)`, принимающего ссылку на объект. 
+**Сopy-and-swap** предполагает реализацию операции копирующего присваивания с использованием конструктора копий и созданием метода `void swap(myvector & other)`, принимающего ссылку на объект. 
 
 ```cpp
 class myvector {
   …  
 public:
-  myvector & operator=(const myvector & other)
+  myvector & operator=(myvector const & other)
   {
     myvector tmp(other); // Вызов конструктора копий
     this -> swap(tmp);

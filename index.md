@@ -142,3 +142,13 @@ All changes made here will be erased.
 	* [Деструктор и его необходимость](lecture/11.html#destructor_and_its_necessity)
 
 
+12. [Лекция 12](lecture/12.html)
+	* [Конструктор копий](lecture/12.html#copy_constructor)
+		* [Три случая когда вызывается конструктор копий](lecture/12.html#three_cases_calling_copy_constructor)
+		* [Return Value Optimization](lecture/12.html#return_value_optimization)
+	* [Функции-члены, которые генерируются "молча"](lecture/12.html#member_funcs_that_are_generated_by_silently)
+	* [Конструктор по-умолчанию](lecture/12.html#default_constructor)
+	* [Операция копирующего присваивания](lecture/12.html#operation_copy_assignment)
+		* [Идиома copy-and-swap](lecture/12.html#idiom_copy_and_swap)
+
+

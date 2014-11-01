@@ -95,3 +95,10 @@ inline-функции : inline_functions
 Константные методы : constant_method
 #Перегрузка операции [] : overload_array_subscript
 Деструктор и его необходимость : destructor_and_its_necessity
+Конструктор копий : copy_constructor
+Три случая когда вызывается конструктор копий : three_cases_calling_copy_constructor
+Return Value Optimization : return_value_optimization
+Функции-члены, которые генерируются "молча" : member_funcs_that_are_generated_by_silently
+Конструктор по-умолчанию : default_constructor
+Операция копирующего присваивания : operation_copy_assignment
+Идиома copy-and-swap : idiom_copy_and_swap

@@ -38,8 +38,8 @@ public:
 
 В действительности, при запуске программы происходит ошибка:
 
-> id1 created
-> id1 killed
+> id1 created<br>
+> id1 killed<br>
 > *** Error in `./main': double free or corruption (fasttop): …
 
 
@@ -64,10 +64,10 @@ myvector(myvector const & other): size(other.size), name(other.name)
 
 Теперь выхлоп программы выглядит следующим образом:
 
->id1 created
->copy ctor from id1 to id2
->id2 killed
->id1 killed
+>id1 created<br>
+>copy ctor from id1 to id2<br>
+>id2 killed<br>
+>id1 killed<br>
 
 ### Три случая когда вызывается конструктор копий
 

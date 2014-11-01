@@ -7,32 +7,31 @@
 
 ```cpp
 class myvector {
-  
-  int size;
-  int * data;
-  string name;
+    int size;
+    int * data;
+    string name;
   
 public:
-  myvector(string const & name = "id1") :
-  size(10), name(name)
-  {
-    data = new int [size];
-    cout << name << " created\n";
-  }
+    myvector(string const & name = "id1")
+        : size(10), name(name)
+    {
+        data = new int [size];
+        cout << name << " created\n";
+    }
   
-  ~myvector()
-  {
-    delete []data;
-    cout << name << " killed\n";
-  }  
+    ~myvector()
+    {
+        delete []data;
+        cout << name << " killed\n";
+    }  
 };
 ```
 
 Проверим работу нашего класса, выполнив следующий код в функции `main`:
 
 ```cpp
-  myvector myv1;
-  myvector myv2 = myv1;
+    myvector myv1;
+    myvector myv2 = myv1;
 ```
 
 Когда мы пишем `myvector myv2 = myv1;`, мы подразумеваем, что происходит копирование объекта `myv1`, а в конце выполнения функции `main()` удаление двух объектов `myv1` и `myv2`.
@@ -40,9 +39,7 @@ public:
 В действительности, при запуске программы происходит ошибка:
 
 > id1 created
->
 > id1 killed
->
 > *** Error in `./main': double free or corruption (fasttop): …
 
 
@@ -57,25 +54,20 @@ public:
 ```cpp
 myvector(myvector const & other): size(other.size), name(other.name)
 {
-  data = new int[size];
-  copy(other.data, other.data + size, data);
-  ++name[2];
-  
-  cout << "copy ctor from " << other.name << " to " << name << endl;
+    data = new int[size];
+    copy(other.data, other.data + size, data);
+    ++name[2];
+    
+    cout << "copy ctor from " << other.name << " to " << name << endl;
 }
 ```
 
 Теперь выхлоп программы выглядит следующим образом:
 
 >id1 created
->
 >copy ctor from id1 to id2
->
 >id2 killed
->
 >id1 killed
-
-
 
 ### Три случая когда вызывается конструктор копий
 
@@ -90,15 +82,15 @@ myvector(myvector const & other): size(other.size), name(other.name)
 
 ```cpp
 class myvector {
-  …  
+    …
 public:
-  myvector g() {return myvector();}  
+    myvector g() { return myvector(); }  
 };
 
 
 int main()
 {
-  myvector myv1 = g();
+    myvector myv1 = g();
 } 
 ```
 
@@ -114,8 +106,7 @@ int main()
 
 ```cpp
 class Empty{
-
-  public:
+public:
     Empty() {}
 
     Empty(Empty const &) {/* … */}
@@ -147,9 +138,9 @@ class Empty{
 ```cpp
 class Student
 {
-  string name;
+    string name;
 public:
-  Student(string const & name) : name(name){}
+    Student(string const & name) : name(name){}
 }
 ```
 
@@ -158,7 +149,7 @@ public:
 ```cpp
 main()
 {
-  Student s;
+    Student s;
 }
 ```
 
@@ -169,7 +160,7 @@ main()
 ```cpp
 main()
 {
-  Student students[10];
+    Student students[10];
 }
 ```
 
@@ -179,9 +170,9 @@ main()
 Реализация функции-члена `operator=` класса `myvector` такова, что при выполнении следующего кода происходит копирование указателя, а не объекта:
 
 ```cpp
-  myvector myv1;
-  myvector myv2;
-  myv2 = myv1;
+    myvector myv1;
+    myvector myv2;
+    myv2 = myv1;
 ```
 
 Если в этом случае нам необходимо копировать сам объект, тогда выполняется реализация операции копирующего присваивания:
@@ -189,19 +180,17 @@ main()
 ```cpp
 myvector & operator=(myvector const & other)
 {
-  // Операция копирующего присваивания всегда начинается с оператора if
-  // для исключения случая a == a
-  if(this != &other) {
-    delete [] data; // Нам потребуется новый размер поля data
+    if (this != &other) {    // "Обязательное" клише
+        delete [] data;     // Нам потребуется новый размер поля data
+        
+        size = other.size;
+        data = new int[size];
+        copy(other.data, other.data + size, data);
+        name = other.name;
+        ++name[2];
+    }
     
-    size = other.size;
-    data = new int[size];
-    copy(other.data, other.data + size, data);
-    name = other.name;
-    ++name[2];
-  }
-  
-  return *this;
+    return *this;
 }
 ```
 
@@ -210,18 +199,18 @@ myvector & operator=(myvector const & other)
 ```cpp
 myvector & operator=(myvector const & other)
 {
-  if(this != &other) {
-    size = other.size;
-    newdata = new int[size];
-    copy(other.data, other.data + size, data);
-    name = other.name;
-    ++name[2];
-
-    delete [] data;
-    data = newdata;
-  }
+    if (this != &other) {
+        size = other.size;
+        newdata = new int[size];
+        copy(other.data, other.data + size, data);
+        name = other.name;
+        ++name[2];
+        
+        delete [] data;
+        data = newdata;
+    }
       
-  return *this;
+    return *this;
 }
 ```
 
@@ -232,22 +221,22 @@ myvector & operator=(myvector const & other)
 
 ```cpp
 class myvector {
-  …  
+    …
 public:
-  myvector & operator=(myvector const & other)
-  {
-    myvector tmp(other); // Вызов конструктора копий
-    this -> swap(tmp);
+    myvector & operator=(myvector const & other)
+    {
+        myvector tmp(other); // Вызов конструктора копий
+        this -> swap(tmp);
+        
+        cout << "copy assigment" << endl;
+        return *this;
+    }
     
-    cout << "copy assigment" << endl;
-    return *this;
-  }
-  
-  void swap(myvector & other)
-  {
-    std::swap(data, other.data);
-    std::swap(size, other.size); 
-    std::swap(name, other.name); 
-  }
+    void swap(myvector & other)
+    {
+        std::swap(data, other.data);
+        std::swap(size, other.size); 
+        std::swap(name, other.name); 
+    }
 };
 ```

@@ -13,7 +13,7 @@ class myvector {
   
 public:
     myvector(string const & name = "id1")
-        : size(10), name(name)
+        : size(8), name(name)
     {
         data = new int [size];
         cout << name << " created\n";

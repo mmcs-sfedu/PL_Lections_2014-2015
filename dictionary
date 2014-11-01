@@ -102,3 +102,4 @@ Return Value Optimization : return_value_optimization
 Конструктор по-умолчанию : default_constructor
 Операция копирующего присваивания : operation_copy_assignment
 Идиома copy-and-swap : idiom_copy_and_swap
+Константные функции-члены : const_member_functions

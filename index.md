@@ -137,7 +137,7 @@ All changes made here will be erased.
 		* [Постфиксная унарная операция (a@ a++ a--)](lecture/11.html#postfix_unary_operator)
 	* [Перегрузка операции !=](lecture/11.html#overloading_not_eq)
 	* [Класс динамического массива](lecture/11.html#class_of_dynamic_array)
-		* [Константные методы](lecture/11.html#constant_method)
+		* [Константные функции-члены](lecture/11.html#const_member_functions)
 	* [Перегрузка операции []](lecture/11.html#overload_array_subscript)
 	* [Деструктор и его необходимость](lecture/11.html#destructor_and_its_necessity)
 

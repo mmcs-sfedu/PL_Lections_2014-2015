@@ -309,7 +309,7 @@ myvector & operator=(myvector const & other)
 class myvector {
     …
 public:
-    myvector & operator=(myvector other)
+    myvector & operator=(myvector other) // вызов КК (случай 2)!
     {
         this -> swap(other);
 

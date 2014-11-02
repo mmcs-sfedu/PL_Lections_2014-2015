@@ -95,7 +95,6 @@ inline-функции : inline_functions
 #Перегрузка операции [] : overload_array_subscript
 Деструктор и его необходимость : destructor_and_its_necessity
 Конструктор копий : copy_constructor
-Три случая когда вызывается конструктор копий : three_cases_calling_copy_constructor
 Return Value Optimization : return_value_optimization
 Конструктор по-умолчанию : default_constructor
 #Операция копирующего присваивания : copy_assignment_operator
@@ -103,3 +102,4 @@ Return Value Optimization : return_value_optimization
 Константные функции-члены : const_member_functions
 Конструктор копии : copy_constructor
 #Функции-члены, которые генерируются «молча» : member_funcs_generated_silently
+#Три случая, когда вызывается конструктор копий : three_cases_calling_copy_constructor

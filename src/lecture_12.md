@@ -75,7 +75,7 @@ myvector(myvector const & other): size(other.size), name(other.name)
 > id2 killed<br>
 > id1 killed<br>
 
-### Три случая когда вызывается конструктор копий
+### Три случая, когда вызывается конструктор копий
 
 1. Явное создание нового объекта-копии:
 

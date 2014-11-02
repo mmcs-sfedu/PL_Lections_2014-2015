@@ -144,7 +144,7 @@ All changes made here will be erased.
 
 12. [Лекция 12](lecture/12.html)
 	* [Конструктор копии](lecture/12.html#copy_constructor)
-		* [Три случая когда вызывается конструктор копий](lecture/12.html#three_cases_calling_copy_constructor)
+		* [Три случая, когда вызывается конструктор копий](lecture/12.html#three_cases_calling_copy_constructor)
 		* [Return Value Optimization](lecture/12.html#return_value_optimization)
 	* [Функции-члены, которые генерируются «молча»](lecture/12.html#member_funcs_generated_silently)
 	* [Конструктор по-умолчанию](lecture/12.html#default_constructor)

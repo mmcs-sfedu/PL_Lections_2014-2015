@@ -103,3 +103,5 @@ Return Value Optimization : return_value_optimization
 Операция копирующего присваивания : operation_copy_assignment
 Идиома copy-and-swap : idiom_copy_and_swap
 Константные функции-члены : const_member_functions
+Конструктор копии : copy_constructor
+Функции-члены, которые генерируются «молча» : member_funcs_that_are_generated_by_"_silently_"

@@ -148,7 +148,7 @@ All changes made here will be erased.
 		* [Return Value Optimization](lecture/12.html#return_value_optimization)
 	* [Функции-члены, которые генерируются «молча»](lecture/12.html#member_funcs_generated_silently)
 	* [Конструктор по-умолчанию](lecture/12.html#default_constructor)
-	* [Операция копирующего присваивания](lecture/12.html#copy_assignment_operation)
+	* [Операция копирующего присваивания](lecture/12.html#copy_assignment_operator)
 		* [Идиома copy-and-swap](lecture/12.html#copy_and_swap_idiom)
 
 

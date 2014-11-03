@@ -9,9 +9,9 @@
 ```cpp
 Date(int d, int m, int y)
 {
-  this->d = d;
-  this->m = m;
-  this->y = y;
+    this->d = d;
+    this->m = m;
+    this->y = y;
 }
 ```
 
@@ -20,11 +20,12 @@ Date(int d, int m, int y)
 **списки инициализации**.
 
 ```cpp
-class Date {
-  int d, m, y;
-
-  public:
-  Date(int d, int m, int y) : d(d), m(m), y(y) {}
+class Date
+{
+    int d, m, y;
+    
+public:
+    Date(int d, int m, int y) : d(d), m(m), y(y) {}
 };
 ```
 
@@ -66,16 +67,17 @@ class Date {
 из лекции 9.
 
 ```cpp
-class Date {
-  int d, m, y;
+class Date
+{
+    int d, m, y;
 
-  publuc:
+public:
     //bool operator==(Date d1, Date d2) типичная ошибка
     bool operator==(Date const & other)
     {
-      return d == other.d &&
-             m == other.m &&
-             y == other.y &&
+        return d == other.d &&
+               m == other.m &&
+               y == other.y;
     }
 };
 ```
@@ -105,23 +107,22 @@ class Date {
 
 ```cpp
 /* date.h */
-// …
-class Date {
-  int d, m, y;
+class Date
+{
+    int d, m, y;
 public:
-
-  // …
-
-  friend
-  ostream & operator<<(ostream & os, Date const & d);
+    // …
+    
+    friend
+    ostream & operator<<(ostream & os, Date const & d);
 };
 
 
 /* date.cpp */
 ostream & operator<<(ostream & os, Date const & d)
 {
-  os << d.d << '.' << d.m << '.' << d.y << std::endl;
-  return os;
+    os << d.d << '.' << d.m << '.' << d.y << '\n';
+    return os;
 }
 ```
 
@@ -138,16 +139,15 @@ ostream & operator<<(ostream & os, Date const & d)
 ```cpp
 /* date.h */
 class Date {
-  int d, m, y;
+    int d, m, y;
 public:
+    // …
 
-  ...
-
-  friend
-  ostream & operator<<(ostream & os, Date const & d)
-  {
-    return os << d.d << '.' << d.m << '.' << d.y << std::endl;
-  }
+    friend
+    ostream & operator<<(ostream & os, Date const & d)
+    {
+        return os << d.d << '.' << d.m << '.' << d.y << '\n';
+    }
 };
 ```
 
@@ -169,23 +169,23 @@ public:
 
 ```cpp
 class BigInteger {
-  int data[1024];
+    int data[1024];
 
 public:
-  BigIntiger & operator+=(BigInteger cons & other)
-  {
-    // Цикл по data: суммирование и перенос
-    // Возвращаем ссылку на себя
-    return *this;
-  }
+    BigIntiger & operator+=(BigInteger cons & other)
+    {
+        // Цикл по data: суммирование и перенос
+        // Возвращаем ссылку на себя
+        return *this;
+    }
 };
 
 BigInteger operator+(BigInteger const & bi1, BigInteger const & bi2)
 // функция не может возвращать ссылку, потому возвращает новый объект
 {
-  BigInteger res(bi1); // копия bi1
-  res += bi2;          // res хранит bi1 + bi2
-  return res;
+    BigInteger res(bi1);  // копия bi1
+    res += bi2;           // res хранит bi1 + bi2
+    return res;
 }
 ```
 

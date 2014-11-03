@@ -93,7 +93,7 @@ p.pop_back();	   // Удаление последнего элемента
 2. Для v1 выделяется память размера v.
 3. Содержимое v копируется в v1.
 
-![copy_vector](../img/copy_vector.png "Процесс копирования вектора")
+<img src="../img/copy_vector.svg" alt="Процесс копирования вектора" style="width:670px">
 
 [doc vequality]: http://www.cplusplus.com/reference/vector/vector/operator=/
 

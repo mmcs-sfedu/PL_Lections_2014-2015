@@ -152,3 +152,11 @@ All changes made here will be erased.
 		* [Идиома copy-and-swap](lecture/12.html#copy_and_swap_idiom)
 
 
+	* [Метод resize() в классе myvectror](lecture/13.html#method_resize_in_class_myvectror)
+	* [Класс matrix](lecture/13.html#class_matrix)
+		* [Реализация класса matrix](lecture/13.html#implementation_class_matrix)
+		* [Операция доступа по индексу в matrix](lecture/13.html#access_operation_on_index_in_matrix)
+		* [Конструктор копий и operator= для класса matrix](lecture/13.html#copy_constructor_and_assign_for_class_of_matrix)
+	* [Moving-конструкторы и moving-operator= (C++11)](lecture/13.html#moving_constructors_and_moving_operator)
+
+

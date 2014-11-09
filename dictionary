@@ -103,3 +103,9 @@ Return Value Optimization : return_value_optimization
 Конструктор копии : copy_constructor
 #Функции-члены, которые генерируются «молча» : member_funcs_generated_silently
 #Три случая, когда вызывается конструктор копий : three_cases_calling_copy_constructor
+Метод resize() в классе myvectror : method_resize_in_class_myvectror
+Класс matrix : class_matrix
+Реализация класса matrix : implementation_class_matrix
+Операция доступа по индексу в matrix : access_operation_on_index_in_matrix
+#Конструктор копий и operator= для класса matrix : copy_constructor_and_assign_for_class_of_matrix
+#Moving-конструкторы и moving-operator= (C++11) : moving_constructors_and_moving_operator

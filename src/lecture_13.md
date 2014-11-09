@@ -26,7 +26,7 @@ public:
 
 Матрица - вектор векторов. 
 
-[img]()
+<img src="../img/matrix_struct.svg" alt="Структура матрицы 3x4" style="width:670px">
 
 Допустим нам необходимо создать матрицу 3x4, тогда мы можем реализовать ее следующим образом.
 
@@ -69,7 +69,7 @@ int main()
 
 Рассмотрим, как данная матрица будет выглядеть в памяти.
 
-[img]()
+<img src="../img/matrix_in_memory.svg" alt="Матрица 3x4 в памяти" style="width:670px">
 
 Будет ли данная динамическая память возвращена системе?
 
@@ -82,7 +82,7 @@ int main()
 ### Реализация класса matrix
 
 ```cpp
-/* matrix.hpp */
+/* matrix.h */
 tmplate<typename T>
 class matrix
 {
@@ -97,7 +97,7 @@ public:
 	// конструктор необходимо вызывать в списке инициализации
 	matrix(int m, int n): mdata(m)
 	{
-		for(int i =0; i < m; i++)
+		for(int i = 0; i < m; i++)
 			mdata[i].resize(n);
 	}
 };
@@ -128,7 +128,7 @@ public:
 Поэтому лучше всего перегрузить `operator()`, тогда обращение по индексу будет выглядеть следующим образом `m(1, 2)`.
 
 ```cpp
-/* matrix.hpp */
+/* matrix.h */
 tmplate<typename T>
 class matrix
 {
@@ -162,7 +162,7 @@ public:
 Посмотрим, какой будет сгенерирован конструктор копии 
 
 ```cpp
-/* matrix.hpp */
+/* matrix.h */
 tmplate<typename T>
 class matrix
 {

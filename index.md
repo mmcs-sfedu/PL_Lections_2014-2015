@@ -152,6 +152,7 @@ All changes made here will be erased.
 		* [Идиома copy-and-swap](lecture/12.html#copy_and_swap_idiom)
 
 
+13. [Лекция 13](lecture/13.html)
 	* [Метод resize() в классе myvectror](lecture/13.html#method_resize_in_class_myvectror)
 	* [Класс matrix](lecture/13.html#class_matrix)
 		* [Реализация класса matrix](lecture/13.html#implementation_class_matrix)

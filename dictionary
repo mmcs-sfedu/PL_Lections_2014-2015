@@ -109,3 +109,4 @@ Return Value Optimization : return_value_optimization
 Операция доступа по индексу в matrix : access_operation_on_index_in_matrix
 #Конструктор копий и operator= для класса matrix : copy_constructor_and_assign_for_class_of_matrix
 #Moving-конструкторы и moving-operator= (C++11) : moving_constructors_and_moving_operator
+Метод resize() в классе myvector : method_resize_in_class_myvector

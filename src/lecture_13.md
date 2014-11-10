@@ -1,7 +1,7 @@
 # Лекция 13
 
 
-## Метод resize() в классе myvectror
+## Метод resize() в классе myvector
 
 ```cpp
 /* myvector.h */
@@ -38,7 +38,7 @@ public:
 /* main.cpp */
 int main()
 {
-    myvector<myvectror<int>> m(3);
+    myvector<myvector<int>> m(3);
     …  
 }
 ```
@@ -91,9 +91,9 @@ template<typename T>
 class matrix
 {
     // Так сделать не получится 
-    // myvector<myvectror<T>> mdata(3);
+    // myvector<myvector<T>> mdata(3);
     // Необходимо писать так
-    myvector<myvectror<T>> mdata;
+    myvector<myvector<T>> mdata;
     
 public:
     // Вызывать конструктор mdata(m) в теле конструктора       
@@ -187,12 +187,12 @@ myvector<int> vv(v + v);
 
 ```cpp
 template<typename T>
-class myvectror
+class myvector
 {
 public:
     friend
-    myvector<T> operator+(const myvectror<T>& v1, 
-                          const myvectror<T>& v2) 
+    myvector<T> operator+(const myvector<T>& v1, 
+                          const myvector<T>& v2) 
     {
         myvector<T> v(v1.sz);
         for(int i = 0; i < v1.sz; i++)
@@ -210,10 +210,10 @@ public:
 
 ```cpp
 template<typename T>
-class myvectror
+class myvector
 {
 public:
-    myvector(const myvectro<T>&& v)
+    myvector(const myvector<T>&& v)
     {
     	// to be continued in next lecture
     }

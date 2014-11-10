@@ -90,20 +90,20 @@ int main()
 template<typename T>
 class matrix
 {
-	// Так сделать не получится 
-	// myvector<myvectror<T>> mdata(3);
-	// Необходимо писать так
-	myvector<myvectror<T>> mdata;
-	
+    // Так сделать не получится 
+    // myvector<myvectror<T>> mdata(3);
+    // Необходимо писать так
+    myvector<myvectror<T>> mdata;
+    
 public:
-	// Вызывать конструктор mdata(m) в теле конструктора       
-	// matrix уже поздно, а при объявлении еще рано, поэтому 
-	// конструктор необходимо вызывать в списке инициализации
-	matrix(int m, int n): mdata(m)
-	{
-		for(int i = 0; i < m; i++)
-			mdata[i].resize(n);
-	}
+    // Вызывать конструктор mdata(m) в теле конструктора       
+    // matrix уже поздно, а при объявлении еще рано, поэтому 
+    // конструктор необходимо вызывать в списке инициализации
+    matrix(int m, int n): mdata(m)
+    {
+        for(int i = 0; i < m; i++)
+            mdata[i].resize(n);
+    }
 };
 ```
 
@@ -125,7 +125,7 @@ public:
 
 ### Операция доступа по индексу в matrix
 
-`m[1, 2]` — в C++ так  писать нельзя
+`m[1, 2]` — в C++ так писать нельзя
 
 `m[1][2]` — класс matrix не контролирует `[2]`
 
@@ -133,16 +133,16 @@ public:
 
 ```cpp
 /* matrix.h */
-tmplate<typename T>
+template<typename T>
 class matrix
 {
-	…  
+    …  
 public:
-	…
-	T& operator()(int i, int j)
-	{
-		return mdata[i][j];
-	}  
+    …
+    T& operator()(int i, int j)
+    {
+        return mdata[i][j];
+    }  
 };
 ``` 
 
@@ -163,17 +163,17 @@ public:
 Автоматически сгенерированный конструктор копии вызывает конструкторы копий для всех своих полей. 
 Автоматически сгенерированная операция присваивания вызывает операции присваивания для всех своих полей.
 
-Посмотрим, какой будет сгенерирован конструктор копии 
+Посмотрим, какой будет сгенерирован конструктор копии.
 
 ```cpp
 /* matrix.h */
-tmplate<typename T>
+template<typename T>
 class matrix
 {
-	…
+    …
 public:
-	…
-	matrix(const matrix<T> & mm): mdata(mm.mdata) {}
+    …
+    matrix(const matrix<T> & mm): mdata(mm.mdata) {}
 };
 ```
 
@@ -182,7 +182,7 @@ public:
 
 ```cpp
 myvector<int> v(3), v1(3);
-myvector<int> vv(v+v);
+myvector<int> vv(v + v);
 ```
 
 ```cpp
@@ -190,20 +190,21 @@ template<typename T>
 class myvectror
 {
 public:
-	friend
-	myvector<T> operator+(const myvectror<T>& v1, const myvectror<T>& v2) 
-	{
-		myvector<T> v(v1.sz);
-		for(int i = 0; i < v1.sz; i++)
-			v[i] = v1[i] + v2[i];
-		return v;
-	}
+    friend
+    myvector<T> operator+(const myvectror<T>& v1, 
+                          const myvectror<T>& v2) 
+    {
+        myvector<T> v(v1.sz);
+        for(int i = 0; i < v1.sz; i++)
+            v[i] = v1[i] + v2[i];
+        return v;
+    }
 }
 ```
 
-Бьярн Страуструп предложил вынести **RVO** на уровень языка.
+Бьярн Страуструп предложил вынести **RVO** (return value optimization) на уровень языка.
 
-`v+v1` - rvalue
+`v + v1` — rvalue
 
 Ссылка на `rvalue` `T && t`
 
@@ -212,9 +213,9 @@ template<typename T>
 class myvectror
 {
 public:
-	myvector(const myvectro<T>&& v)
-	{
-		// to be continued in next lecture
-	}
+    myvector(const myvectro<T>&& v)
+    {
+    	// to be continued in next lecture
+    }
 }
 ```

@@ -8,17 +8,20 @@
 #include <algorithm>
 class myvector 
 {
-	…
+    int size;
+    int * data;
+    …
+    
 public:
-	void resize(int nsz)
-	{
-		T* nd = new T[nsz];
-		int n = (sz < nsn) ? sz : nsz;
-		std::copy(data, data + n), nd);
-		delete[] data;
-		data = nd;
-		sz = nsz;
-	}
+    void resize(int nsize)
+    {
+        T* ndata = new T[nsize];
+        int n = (size < nsize) ? size : nsize;
+        std::copy(data, data + n, ndata);
+        delete[] data;
+        data = ndata;
+        size = nsize;
+    }
 };
 ```
 

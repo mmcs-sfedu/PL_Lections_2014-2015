@@ -8,19 +8,18 @@
 #include <algorithm>
 class myvector 
 {
-    int size;
-    int * data;
-    …
-    
+    int sz;
+    T * data;
+    …    
 public:
     void resize(int nsize)
     {
         T* ndata = new T[nsize];
-        int n = (size < nsize) ? size : nsize;
+        int n = (sz < nsize) ? sz : nsize;
         std::copy(data, data + n, ndata);
         delete[] data;
         data = ndata;
-        size = nsize;
+        sz = nsize;
     }
 };
 ```
@@ -167,7 +166,7 @@ public:
 
 ```cpp
 /* matrix.h */
-tmplate<typename T>
+template<typename T>
 class matrix
 {
 	…

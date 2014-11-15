@@ -39,6 +39,7 @@ def make_index():
 		for line in der_file:
 			if line.startswith('# '):
 				i=i+1
+				index_file.write('\n\n<a id="lecture' + str(i) + '" ' + 'title="Лекция ' + str(i) + '" class="toc-item"></a>\n\n')
 				index_file.write(str(i) + '. [' + line.replace('`', '').replace('# ', '').replace('\n', '') + '](' + der_dir_name + '/' + link_file_name + ')\n')
 			if line.startswith('## '):
 				index_file.write('\t*')
@@ -92,9 +93,30 @@ def make_der_files(refresh_dict):
 
 #==============================================
 
+def make_stream():
+	stream_file = open(der_dir_name + '/stream.md', 'w', encoding='utf8')
+	
+	write_index_head(stream_file)
+	
+	nlect = 0
+	for lect_file_name in sorted(glob.glob( src_file_name_template )):
+		lect_file = open(lect_file_name, 'r', encoding='utf8')
+		nlect = nlect + 1
+		
+		for line in lect_file:
+			if line.startswith('# '):
+				stream_file.write('\n\n<a id="lecture' + str(nlect) + '" ' + 'title="Лекция ' + str(nlect) + '" class="toc-item"></a>\n')
+			
+			stream_file.write(line)
+		lect_file.close()
+	
+	stream_file.close()
+
+#==============================================
+
 def write_index_head(file_to_write):
 	file_to_write.write('---\n')
-	file_to_write.write('layout: default\n')
+	file_to_write.write('layout: index\n')
 	file_to_write.write('title: Лекции по курсу «Языки программирования» 2014, ФИИТ на Мехмате ЮФУ\n')
 	file_to_write.write('---\n\n')
 	file_to_write.write('Конспект лекций по курсу ЯП\n=====================\n\n')

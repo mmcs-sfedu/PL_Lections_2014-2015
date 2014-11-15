@@ -116,7 +116,7 @@ def make_stream():
 
 def write_index_head(file_to_write):
 	file_to_write.write('---\n')
-	file_to_write.write('layout: default\n')
+	file_to_write.write('layout: index\n')
 	file_to_write.write('title: Лекции по курсу «Языки программирования» 2014, ФИИТ на Мехмате ЮФУ\n')
 	file_to_write.write('---\n\n')
 	file_to_write.write('Конспект лекций по курсу ЯП\n=====================\n\n')

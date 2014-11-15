@@ -39,6 +39,7 @@ def make_index():
 		for line in der_file:
 			if line.startswith('# '):
 				i=i+1
+				index_file.write('\n\n<a id="lecture' + str(i) + '" ' + 'title="Лекция ' + str(i) + '" class="toc-item"></a>\n\n')
 				index_file.write(str(i) + '. [' + line.replace('`', '').replace('# ', '').replace('\n', '') + '](' + der_dir_name + '/' + link_file_name + ')\n')
 			if line.startswith('## '):
 				index_file.write('\t*')

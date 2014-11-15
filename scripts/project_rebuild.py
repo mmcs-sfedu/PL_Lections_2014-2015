@@ -32,7 +32,9 @@ def make_index():
 	regex_link_text = re.compile('.*#|`|\n')
 	pre_line = ''
 	
-	for der_file_name in sorted(glob.glob( der_file_name_template )):
+	der_file_names = sorted(glob.glob( der_file_name_template ))
+	der_file_names.pop()
+	for der_file_name in der_file_names:
 		der_file_name = der_file_name.replace('\\', '/')
 		der_file = open(der_file_name, 'r', encoding='utf8')
 		link_file_name = re.compile('.*/').sub('', der_file_name).replace('.md', '.html')

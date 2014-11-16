@@ -77,7 +77,7 @@ int main()
 
 Будет ли данная динамическая память возвращена системе?
 
-При выходе из блока `{ … m[1][2] = 777; }`, будет вызван деструктор `~m()` выполняющий `delete[] data`.
+При выходе из блока `{ … m[1][2] = 777; }`, будет вызван деструктор `~m()` выполняющий `delete[] data`.
 
 **Замечание**. Если `data` является массивом объектов некоторого класса, тогда до возврата своей памяти он вызывает деструкторы всех элементов этого массива. 
 То есть сначала будут освобождены массивы `int`, а за тем массив `data`.
@@ -175,47 +175,4 @@ public:
     …
     matrix(const matrix<T> & mm): mdata(mm.mdata) {}
 };
-```
-
-
-## Moving-конструкторы и moving-operator= (C++11)
-
-```cpp
-myvector<int> v(3), v1(3);
-myvector<int> vv(v + v);
-```
-
-```cpp
-template<typename T>
-class myvector
-{
-public:
-    friend
-    myvector<T> operator+(const myvector<T>& v1, 
-                          const myvector<T>& v2) 
-    {
-        myvector<T> v(v1.sz);
-        for(int i = 0; i < v1.sz; i++)
-            v[i] = v1[i] + v2[i];
-        return v;
-    }
-}
-```
-
-Бьярн Страуструп предложил вынести **RVO** (return value optimization) на уровень языка.
-
-`v + v1` — rvalue
-
-Ссылка на `rvalue` `T && t`
-
-```cpp
-template<typename T>
-class myvector
-{
-public:
-    myvector(const myvector<T>&& v)
-    {
-    	// to be continued in next lecture
-    }
-}
 ```

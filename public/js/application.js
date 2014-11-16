@@ -105,7 +105,7 @@ function getPrev() {
   var s = location.pathname;
   s = parseInt(s.substr(s.lastIndexOf("/") + 1, 2)) - 1;
   if (typeof first_page == "undefined") {
-    return "<a href='/PL_Lections_2014-2015/lecture" + zeroFill(s, 2) + ".html" + "' > << Лекция " + s + "</a>"
+    return "<b><a href='/PL_Lections_2014-2015/lecture/" + zeroFill(s, 2) + ".html" + "' > << Лекция " + s + "</a></b>"
   }
   return "<a></a>"
 }
@@ -114,7 +114,7 @@ function getNext() {
   var s = location.pathname;
   s = parseInt(s.substr(s.lastIndexOf("/") + 1, 2)) + 1;
   if (typeof last_page == "undefined") {
-    return "<a href='/PL_Lections_2014-2015/lecture" + zeroFill(s, 2) + ".html" + "' > Лекция " + s + ">> </a>"
+    return "<b><a href='/PL_Lections_2014-2015/lecture/" + zeroFill(s, 2) + ".html" + "' > Лекция " + s + " >> </a></b>"
   }
   return "<a></a>"
 }

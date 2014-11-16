@@ -14,7 +14,15 @@ ol.toc {
   width: 250px;
   margin: 0;
 }
+ol.toc-none {
+  width: 250px;
+  margin: 0;
+}
 ol.toc.sticky {
+/*   position: fixed; */
+/*   top: 20px; */
+}
+.toc-container {
   position: fixed;
   top: 20px;
 }
@@ -29,6 +37,12 @@ ol.toc.sticky {
   }
 
   ol.toc {
+    float: none;
+    width: auto;
+    margin: -10px 0 20px;
+  }
+  
+  ol.toc-none {
     float: none;
     width: auto;
     margin: -10px 0 20px;
@@ -55,7 +69,16 @@ footer .mega-octicon {
 ol.toc {
   padding: 0;
 }
+ol.toc-none {
+  padding: 0;
+}
 ol.toc>li {
+  padding: 5px 0;
+  margin: 0;
+  font-size: 16px;
+  list-style-type: none;
+}
+ol.toc-none>li {
   padding: 5px 0;
   margin: 0;
   font-size: 16px;

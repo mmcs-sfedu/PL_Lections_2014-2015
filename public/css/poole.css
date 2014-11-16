@@ -293,6 +293,10 @@ tbody tr:nth-child(odd) th {
   margin-right: auto;*/
 }
 
+.container>ol>li {
+  list-style-type: none;
+}
+
 
 /*
  * Masthead

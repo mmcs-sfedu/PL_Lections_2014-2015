@@ -93,3 +93,35 @@ var scrollTo = function(e) {
     location.hash = elScrollTo;
   })
 }
+
+function getNavigation() {
+  document.write(getPrev())
+  if (typeof first_page == "undefined" && typeof last_page == "undefined")
+    document.write("&nbsp;&nbsp;|&nbsp;&nbsp;")
+  document.write(getNext())
+}
+
+function getPrev() {
+  var s = location.pathname;
+  s = parseInt(s.substr(s.lastIndexOf("/") + 1, 2)) - 1;
+  if (typeof first_page == "undefined") {
+    return "<a href='/PL_Lections_2014-2015/lecture" + zeroFill(s, 2) + ".html" + "' > << Лекция " + s + "</a>"
+  }
+  return "<a></a>"
+}
+
+function getNext() {
+  var s = location.pathname;
+  s = parseInt(s.substr(s.lastIndexOf("/") + 1, 2)) + 1;
+  if (typeof last_page == "undefined") {
+    return "<a href='/PL_Lections_2014-2015/lecture" + zeroFill(s, 2) + ".html" + "' > Лекция " + s + ">> </a>"
+  }
+  return "<a></a>"
+}
+
+function zeroFill(number, width) {
+  width -= number.toString().length;
+  if(width > 0)
+    return new Array( width + (/\./.test( number ) ? 2 : 1) ).join( '0' ) + number;
+  return number;
+}

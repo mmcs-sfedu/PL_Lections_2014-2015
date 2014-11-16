@@ -67,12 +67,18 @@ def make_der_files(refresh_dict):
 	if refresh_dict:
 		clean_dictionary()
 	
-	for lect_file_name in glob.glob( src_file_name_template ):
+	lect_file_names = sorted(glob.glob( src_file_name_template ))
+	for lect_file_name in lect_file_names:
 		lect_file = open(lect_file_name, 'r', encoding='utf8')
 		der_file = open(lect_file_name.replace(src_dir_name, der_dir_name).
 		  replace('lecture_', ''), 'w', encoding='utf8')
 		
 		write_der_head(der_file)
+		
+		if lect_file_name == lect_file_names[0]:
+			der_file.write('<script type="text/javascript">var first_page = true</script>\n\n')
+		if lect_file_name == lect_file_names[len(lect_file_names) - 1]:
+			der_file.write('<script type="text/javascript">var last_page = true</script>\n\n')
 		
 		regex_str_val = re.compile('.*# |`|\n')
 		for line in lect_file:

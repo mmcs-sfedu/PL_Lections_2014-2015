@@ -210,6 +210,18 @@ All changes made here will be erased.
 		* [Реализация класса matrix](lecture/13.html#implementation_class_matrix)
 		* [Операция доступа по индексу в matrix](lecture/13.html#access_operation_on_index_in_matrix)
 		* [Конструктор копий и operator= для класса matrix](lecture/13.html#copy_constructor_and_assign_for_class_of_matrix)
-	* [Moving-конструкторы и moving-operator= (C++11)](lecture/13.html#moving_constructors_and_moving_operator)
+
+
+
+
+<a id="lecture14" title="Лекция 14" class="toc-item"></a>
+
+14. [Лекция 14](lecture/14.html)
+	* [move-конструкторы и move-operator= (C++11)](lecture/14.html#move_constructors_and_move_operator)
+	* [Запрет генерации стандартных операторов](lecture/14.html#prohibition_generation_standard_operators)
+	* [Класс frac дроби](lecture/14.html#class_frac)
+	* [Конструктор преобразования](lecture/14.html#designer_conversion)
+		* [Явные конструкторы преобразования](lecture/14.html#explicit_conversion_constructors)
+	* [Операции приведения типа](lecture/14.html#typecast)
 
 

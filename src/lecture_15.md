@@ -22,7 +22,7 @@ public:
 
 Рассмотрим уже знакомую нам иерархию:
 
-[img](Person(к, д, кк, op=)<-Student(univ, marks-динамич))
+<img src="../img/person_student.svg" alt="Схема наследования Person-Student" style="width:350px">
 
 Наличие динамически выделяемой памяти `int* marks` в классе Student создает большое количество проблем. Рассмотрим подробнее:
 

@@ -115,3 +115,7 @@ Return Value Optimization : return_value_optimization
 Конструктор преобразования : designer_conversion
 Явные конструкторы преобразования : explicit_conversion_constructors
 Операции приведения типа : typecast
+Перегрузка операций ввода-вывода : overloading_io
+Наследование : inheritance
+Порядок вызова конструкторов и деструкторов : order_of_constructor_and_destructor_calls
+#Преобразование в иерархии "предок-потомок" : transformation_in_hierarchy_parent_child

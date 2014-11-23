@@ -225,3 +225,14 @@ All changes made here will be erased.
 	* [Операции приведения типа](lecture/14.html#typecast)
 
 
+
+
+<a id="lecture15" title="Лекция 15" class="toc-item"></a>
+
+15. [Лекция 15](lecture/15.html)
+	* [Перегрузка операций ввода-вывода](lecture/15.html#overloading_io)
+	* [Наследование](lecture/15.html#inheritance)
+	* [Порядок вызова конструкторов и деструкторов](lecture/15.html#order_of_constructor_and_destructor_calls)
+	* [Преобразование в иерархии "предок-потомок"](lecture/15.html#transformation_in_hierarchy_parent_child)
+
+

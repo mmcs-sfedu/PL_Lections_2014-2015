@@ -236,3 +236,17 @@ All changes made here will be erased.
 	* [Преобразование в иерархии "предок-потомок"](lecture/15.html#transformation_in_hierarchy_parent_child)
 
 
+
+
+<a id="lecture16" title="Лекция 16" class="toc-item"></a>
+
+16. [Лекция 16](lecture/16.html)
+	* [Downcast](lecture/16.html#downcast)
+	* [Полиморфизм](lecture/16.html#polymorphism)
+		* [Виртуальные методы в C++](lecture/16.html#virtual_methods_in_cpp)
+		* [Цена виртуальности](lecture/16.html#price_virtuality)
+	* [Деструкторы и полиморфизм](lecture/16.html#destructors_and_polymorphism)
+	* [Полиморфные контейнеры и клонирование](lecture/16.html#polymorphic_containers_and_cloning)
+	* [Система RTTI (Runtime Type Identification)](lecture/16.html#rtti_system)
+
+

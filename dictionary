@@ -119,3 +119,10 @@ Return Value Optimization : return_value_optimization
 Наследование : inheritance
 Порядок вызова конструкторов и деструкторов : order_of_constructor_and_destructor_calls
 #Преобразование в иерархии "предок-потомок" : transformation_in_hierarchy_parent_child
+Downcast : downcast
+Полиморфизм : polymorphism
+Виртуальные методы в C++ : virtual_methods_in_cpp
+Цена виртуальности : price_virtuality
+Деструкторы и полиморфизм : destructors_and_polymorphism
+Полиморфные контейнеры и клонирование : polymorphic_containers_and_cloning
+#Система RTTI (Runtime Type Identification) : rtti_system

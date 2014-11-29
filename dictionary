@@ -126,3 +126,5 @@ Downcast : downcast
 Деструкторы и полиморфизм : destructors_and_polymorphism
 Полиморфные контейнеры и клонирование : polymorphic_containers_and_cloning
 #Система RTTI (Runtime Type Identification) : rtti_system
+**dynamic_cast** : asterisk_asterisk_dyn_cast_asterisk_asterisk
+Операция typeid и структура type_info : operation_typeid_and_type_info_struct

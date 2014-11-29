@@ -248,5 +248,7 @@ All changes made here will be erased.
 	* [Деструкторы и полиморфизм](lecture/16.html#destructors_and_polymorphism)
 	* [Полиморфные контейнеры и клонирование](lecture/16.html#polymorphic_containers_and_cloning)
 	* [Система RTTI (Runtime Type Identification)](lecture/16.html#rtti_system)
+		* [**dynamic_cast**](lecture/16.html#asterisk_asterisk_dyn_cast_asterisk_asterisk)
+		* [Операция typeid и структура type_info](lecture/16.html#operation_typeid_and_type_info_struct)
 
 

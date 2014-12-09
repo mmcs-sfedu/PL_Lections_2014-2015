@@ -266,3 +266,16 @@ All changes made here will be erased.
 		* [Некоторые алгоритмы](lecture/17.html#some_algorithms)
 
 
+
+
+<a id="lecture18" title="Лекция 18" class="toc-item"></a>
+
+18. [Лекция 18](lecture/18.html)
+	* [Откуда брать итераторы](lecture/18.html#where_to_get_iterators)
+		* [Итераторы в C++11](lecture/18.html#iterators_in_cpp_11)
+	* [Концепты](lecture/18.html#concepts)
+	* [Вложенные типы](lecture/18.html#nested_types)
+		* [Второй случай использования typename](lecture/18.html#second_case_is_use_of_typename)
+		* [Вложенный класс](lecture/18.html#nested_class)
+
+

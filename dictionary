@@ -135,3 +135,9 @@ Downcast : downcast
 Стандартная библиотека шаблонов (STL) : standard_template_library_stl
 Общая характкристика STL : total_haraktkristika_stl
 Некоторые алгоритмы : some_algorithms
+Откуда брать итераторы : where_to_get_iterators
+Итераторы в C++11 : iterators_in_cpp_11
+Концепты : concepts
+Вложенные типы : nested_types
+Второй случай использования typename : second_case_is_use_of_typename
+Вложенный класс : nested_class

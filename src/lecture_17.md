@@ -103,14 +103,16 @@ is >> i >> j;
 ### Некоторые алгоритмы
 
 ```cpp
-template<typename It, typename It1>
-void copy(It b, It e, It1 b1)
+template<typename ItIn, typename ItOut>
+void copy(ItIn b, ItIn e, ItOut b1)
 {
-	while(b != e)
+	while (b != e)
+	{
 		*b1 = *b;
-	++b;
-	++b1;
-}
+		++b;
+		++b1;
+	}
+} 
 ```
 
 

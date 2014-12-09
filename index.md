@@ -252,3 +252,17 @@ All changes made here will be erased.
 		* [Операция typeid и структура type_info](lecture/16.html#operation_typeid_and_type_info_struct)
 
 
+
+
+<a id="lecture17" title="Лекция 17" class="toc-item"></a>
+
+17. [Лекция 17](lecture/17.html)
+	* [Стандартная библиотека C++](lecture/17.html#cpp_standard_library)
+		* [Иерархия потоковых классов ввода/вывода](lecture/17.html#hierarchy_stream_i_/_o_classes)
+		* [Файловые потоки](lecture/17.html#file_streams)
+		* [Строковые потоки](lecture/17.html#string_streams)
+	* [Стандартная библиотека шаблонов (STL)](lecture/17.html#standard_template_library_stl)
+		* [Общая характкристика STL](lecture/17.html#total_haraktkristika_stl)
+		* [Некоторые алгоритмы](lecture/17.html#some_algorithms)
+
+

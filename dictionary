@@ -128,3 +128,10 @@ Downcast : downcast
 #Система RTTI (Runtime Type Identification) : rtti_system
 **dynamic_cast** : asterisk_asterisk_dyn_cast_asterisk_asterisk
 Операция typeid и структура type_info : operation_typeid_and_type_info_struct
+Стандартная библиотека C++ : cpp_standard_library
+Иерархия потоковых классов ввода/вывода : hierarchy_stream_i_/_o_classes
+Файловые потоки : file_streams
+Строковые потоки : string_streams
+Стандартная библиотека шаблонов (STL) : standard_template_library_stl
+Общая характкристика STL : total_haraktkristika_stl
+Некоторые алгоритмы : some_algorithms

@@ -7,11 +7,13 @@ list<int> l {2, 7, 8, 9};
 int a[10];
 auto pa = copy(v.begin(), v.end(), a);
 ```
-[img](a array)
+<img src="../img/copy_vector_to_array.svg" alt="array a" style="width:500px">
 
 ```cpp
 pa = copy(l.begin(), l.end(), pa);
 ```
+
+<img src="../img/copy_list_to_array.svg" alt="array a" style="width:500px">
 
 Что будет, если в том контейнере куда мы копируем будет недостаточно места? Будет перезаписана чужая память из-за отсутствия контроля выхода за границу.
 

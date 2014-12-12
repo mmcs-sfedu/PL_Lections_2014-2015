@@ -291,3 +291,17 @@ All changes made here will be erased.
 		* [Алгоритм for_each](lecture/19.html#algorithm_for_each)
 
 
+
+
+<a id="lecture20" title="Лекция 20" class="toc-item"></a>
+
+20. [Лекция 20](lecture/20.html)
+	* [Захват переменных из внешнего контекста](lecture/20.html#capture_variables_from_external_context)
+	* [Сумма элементов контейнера с помощью for_each](lecture/20.html#sum_of_elements_of_container_using_for_each)
+	* [Объекты функции (функторы)](lecture/20.html#objects_function_functors)
+	* [Присваивание лямбда функций переменной](lecture/20.html#assigning_variable_lambda_funcs)
+	* [Виды итераторов](lecture/20.html#types_of_iterators)
+	* [Алгоритм find](lecture/20.html#algorithm_find)
+	* [Алгоритм find_if](lecture/20.html#algorithm_find_if)
+
+

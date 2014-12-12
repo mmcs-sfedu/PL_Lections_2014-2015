@@ -146,3 +146,10 @@ Downcast : downcast
 Конструкторы контейнеров : designers_containers
 Алгоритмы : algorithms
 Алгоритм for_each : algorithm_for_each
+Захват переменных из внешнего контекста : capture_variables_from_external_context
+Сумма элементов контейнера с помощью for_each : sum_of_elements_of_container_using_for_each
+Объекты функции (функторы) : objects_function_functors
+Присваивание лямбда функций переменной : assigning_variable_lambda_funcs
+Виды итераторов : types_of_iterators
+Алгоритм find : algorithm_find
+Алгоритм find_if : algorithm_find_if

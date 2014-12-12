@@ -279,3 +279,15 @@ All changes made here will be erased.
 		* [Вложенный класс](lecture/18.html#nested_class)
 
 
+
+
+<a id="lecture19" title="Лекция 19" class="toc-item"></a>
+
+19. [Лекция 19](lecture/19.html)
+	* [Итератор списка](lecture/19.html#iterator_list)
+	* [Основные контейнеры STL](lecture/19.html#basic_stl_containers)
+	* [Конструкторы контейнеров](lecture/19.html#designers_containers)
+	* [Алгоритмы](lecture/19.html#algorithms)
+		* [Алгоритм for_each](lecture/19.html#algorithm_for_each)
+
+

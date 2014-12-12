@@ -141,3 +141,8 @@ Downcast : downcast
 Вложенные типы : nested_types
 Второй случай использования typename : second_case_is_use_of_typename
 Вложенный класс : nested_class
+Итератор списка : iterator_list
+Основные контейнеры STL : basic_stl_containers
+Конструкторы контейнеров : designers_containers
+Алгоритмы : algorithms
+Алгоритм for_each : algorithm_for_each

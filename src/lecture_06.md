@@ -8,7 +8,7 @@
 	const int& cci = i; // Здесь все будет нормально
 	const int n = 10;
 	int& cn = n; // Такое компилятор запретит
-	int& cn = const_cast<int>(n);
+	int& cn = const_cast<int&>(n);
 	const int& ccn = n; 
 ```
 

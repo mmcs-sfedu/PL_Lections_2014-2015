@@ -305,3 +305,37 @@ All changes made here will be erased.
 	* [Алгоритм find_if](lecture/20.html#algorithm_find_if)
 
 
+
+
+<a id="lecture21" title="Лекция 21" class="toc-item"></a>
+
+21. [Лекция 21](lecture/21.html)
+	* [all_of](lecture/21.html#all_of)
+	* [equal](lecture/21.html#equal)
+	* [mismatch](lecture/21.html#mismatch)
+	* [search](lecture/21.html#search)
+	* [copy](lecture/21.html#copy)
+	* [Итераторы вставки](lecture/21.html#iterator_insert)
+	* [Итерторы потоков](lecture/21.html#itertory_flows)
+	* [Итератор потока ввода](lecture/21.html#iterator_input_stream)
+
+
+
+
+<a id="lecture22" title="Лекция 22" class="toc-item"></a>
+
+22. [Set и Map](lecture/22.html)
+		* [Итерация по set](lecture/22.html#iteration_on_set)
+		* [Требования от множества](lecture/22.html#requirements_from_variety_of)
+		* [Ассоциативный словарь](lecture/22.html#associative_dictionary)
+		* [какая-то фигня](lecture/22.html#some_garbage)
+
+
+
+
+<a id="lecture23" title="Лекция 23" class="toc-item"></a>
+
+23. [Лекция 23](lecture/23.html)
+	* [Алгоритмы модифицирующие последовательность](lecture/23.html#algorithms_for_modifying_sequence)
+
+

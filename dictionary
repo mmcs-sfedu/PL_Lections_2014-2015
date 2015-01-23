@@ -153,3 +153,16 @@ Downcast : downcast
 Виды итераторов : types_of_iterators
 Алгоритм find : algorithm_find
 Алгоритм find_if : algorithm_find_if
+all_of : all_of
+equal : equal
+mismatch : mismatch
+search : search
+copy : copy
+Итераторы вставки : iterator_insert
+Итерторы потоков : itertory_flows
+Итератор потока ввода : iterator_input_stream
+Итерация по set : iteration_on_set
+Требования от множества : requirements_from_variety_of
+Ассоциативный словарь : associative_dictionary
+какая-то фигня : some_garbage
+Алгоритмы модифицирующие последовательность : algorithms_for_modifying_sequence

@@ -166,3 +166,4 @@ copy : copy
 Ассоциативный словарь : associative_dictionary
 какая-то фигня : some_garbage
 Алгоритмы модифицирующие последовательность : algorithms_for_modifying_sequence
+Set и Map : set_and_map

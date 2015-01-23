@@ -324,10 +324,11 @@ All changes made here will be erased.
 
 <a id="lecture22" title="Лекция 22" class="toc-item"></a>
 
-22. [Set и Map](lecture/22.html)
-	* [Итерация по set](lecture/22.html#iteration_on_set)
-	* [Требования от множества](lecture/22.html#requirements_from_variety_of)
-	* [Ассоциативный словарь](lecture/22.html#associative_dictionary)
+22. [Лекция 22](lecture/22.html)
+	* [Set и Map](lecture/22.html#set_and_map)
+		* [Итерация по set](lecture/22.html#iteration_on_set)
+		* [Требования от множества](lecture/22.html#requirements_from_variety_of)
+		* [Ассоциативный словарь](lecture/22.html#associative_dictionary)
 
 
 

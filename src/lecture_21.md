@@ -15,7 +15,7 @@ equal(b, e, b1)
 {
 	while(b != e)
 	{
-		if (*b1 != *b1)
+		if (*b != *b1)
 			return false;
 	++b;
 	++b1;

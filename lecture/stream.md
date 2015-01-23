@@ -4248,7 +4248,7 @@ equal(b, e, b1)
 {
 	while(b != e)
 	{
-		if (*b1 != *b1)
+		if (*b != *b1)
 			return false;
 	++b;
 	++b1;
@@ -4404,7 +4404,7 @@ copy(istream_iterator<int>(cin), istream_iterator<int>(), back_incerter(v));
  
 ## Set и Map
 
-Внутреннее представление.
+#### Внутреннее представление
 
 `set<T>` и `map<K, V>` являются БДП O(log n).<br/>
 unordered_set<T>, `unordered_map<K, V>` — O(1), хэш таблица.

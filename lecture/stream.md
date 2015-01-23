@@ -4288,7 +4288,7 @@ search(b, e, b1, e1)
 OutIt copy(InIt b, InIt e, OutIt b1)
 {
 	while(b != e) {
-		*b1 != *b;
+		*b1 = *b;
 		++b;
 		++b1;
 	}

@@ -84,7 +84,7 @@ cout << f.sum;
 ## Присваивание лямбда функций переменной
 
 ```cpp
-#include <functioanal>
+#include <functional>
 
 auto g = [](int x){return x*x;}
 // Здесь auto принимает тип std::function<int(int)>, поэтому можно написать так:
